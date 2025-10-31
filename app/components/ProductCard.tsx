@@ -53,7 +53,7 @@ export default function ProductCard(props: Prop) {
         <span className="uppercase tracking-wider text-xs text-gray-400">
           SKU: {sku}
         </span>
-        <button className="px-4 py-1.5 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium text-sm hover:opacity-90 transition cursor-pointer">
+        <button style={{ backgroundColor: '#3f50b5' }} className="px-4 py-1.5 rounded-lg text-white font-medium text-sm hover:opacity-90 transition cursor-pointer">
           Ver Detalles
         </button>
       </div>
