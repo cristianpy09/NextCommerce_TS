@@ -11,7 +11,7 @@ export default function LoginPage() {
 
 
       {/* Contenedor principal */}
-      <div className="relative z-10 flex flex-col items-center justify-center bg-gradient-to-br from-[#182848] to-[#4CA1AF] p-6 rounded-2xl text-white shadow-2xl backdrop-blur-md h-[400px] w-[350px] border border-white/20">
+      <div className="relative z-10 flex flex-col items-center justify-center bg-gradient-to-br from-[#182848] to-[#499daa] p-6 rounded-2xl text-white shadow-2xl backdrop-blur-md h-[400px] w-[350px] border border-white/20">
 
         
         {/* Ícono de carrito */}
