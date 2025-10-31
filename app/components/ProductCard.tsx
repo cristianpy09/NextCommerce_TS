@@ -39,7 +39,7 @@ export default function ProductCard(props: Prop) {
         </div>
 
         <div className="flex items-center justify-between mt-auto">
-          <span className="text-lg font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+          <span className="text-lg font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
             ${price?.toFixed(2)}
           </span>
           <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/20 border border-white/30">
@@ -53,7 +53,7 @@ export default function ProductCard(props: Prop) {
         <span className="uppercase tracking-wider text-xs text-gray-400">
           SKU: {sku}
         </span>
-        <button className="px-4 py-1.5 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium text-sm hover:opacity-90 transition">
+        <button className="px-4 py-1.5 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium text-sm hover:opacity-90 transition cursor-pointer">
           Ver Detalles
         </button>
       </div>
