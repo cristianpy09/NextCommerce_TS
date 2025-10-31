@@ -54,7 +54,7 @@ export default function LoginPage() {
         {/* Enlace inferior */}
         <a
           href="#"
-          className="text-sm text-white/80 mt-30 hover:text-white transition-all"
+          className="text-sm text-black/80 mt-30 hover:text-white transition-all"
         >
           Forgot password?
         </a>
