@@ -39,7 +39,7 @@ export default function ProductCard(props: Prop) {
         </div>
 
         <div className="flex items-center justify-between mt-auto">
-          <span className="text-lg font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+          <span className="text-lg font-bold bg-linear-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
             ${price?.toFixed(2)}
           </span>
           <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/20 border border-white/30">
@@ -53,7 +53,10 @@ export default function ProductCard(props: Prop) {
         <span className="uppercase tracking-wider text-xs text-gray-400">
           SKU: {sku}
         </span>
-        <button style={{ backgroundColor: '#3f50b5' }} className="px-4 py-1.5 rounded-lg text-white font-medium text-sm hover:opacity-90 transition cursor-pointer">
+        <button
+          style={{ backgroundColor: "#3f50b5" }}
+          className="px-4 py-1.5 rounded-lg text-white font-medium text-sm hover:opacity-90 transition cursor-pointer"
+        >
           Ver Detalles
         </button>
       </div>
