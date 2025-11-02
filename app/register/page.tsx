@@ -11,7 +11,7 @@ export default function RegisterPage() {
 
 
       {/* Contenedor principal */}
-      <div className="relative z-10 flex flex-col items-center justify-center bg-linear-to-br from-[#182848] to-[#499daa] p-6 rounded-2xl text-white shadow-2xl backdrop-blur-md h-[500px] w-[350px] border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.6)] ">
+      <div className="relative z-10 flex flex-col items-center justify-center bg-linear-to-br from-[#182848] to-[#499daa] p-6 rounded-2xl text-white  backdrop-blur-md h-[500px] w-[350px] border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.6)] ">
 
 
         {/* Ícono de carrito */}
