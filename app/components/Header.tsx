@@ -3,9 +3,9 @@ import React from 'react'
 export default function Header() {
   return (
     <header>
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar fixed top-0 left-0 w-full z-50 bg-base-100 shadow-sm  ">
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">Ecomerce-Lite</a>
   </div>
   <div className="flex-none">
     <div className="dropdown dropdown-end">

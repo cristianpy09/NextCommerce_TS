@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import Header from "../components/Header";
-import AsideBar from "../components/AsideBar";
+
 
 export default function DashboardLayout({
   children,
@@ -12,8 +12,8 @@ export default function DashboardLayout({
   return (
     <body>
       <Header />
-      <aside>
-        <div className="drawer lg:drawer-open">
+      <aside >
+        <div className="drawer lg:drawer-open ">
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center">
             {children}
@@ -24,7 +24,7 @@ export default function DashboardLayout({
               Open 
             </label>
           </div>
-          <div className="drawer-side">
+          <div className="drawer-side mt-16">
             <label
               htmlFor="my-drawer-3"
               aria-label="close sidebar"
