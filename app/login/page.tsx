@@ -11,28 +11,28 @@ export default function LoginPage() {
 
 
       {/* Contenedor principal */}
-      <div className="relative z-10 flex flex-col items-center justify-center bg-gradient-to-br from-[#182848] to-[#499daa] p-6 rounded-2xl text-white shadow-2xl backdrop-blur-md h-[400px] w-[350px] border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.6)] rounded-2xl">
+      <div className="relative z-10 flex flex-col items-center justify-center bg-gradient-to-br from-[#182848] to-[#499daa] p-6 rounded-2xl text-white shadow-2xl backdrop-blur-md h-[450px] w-[350px] border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.6)] rounded-2xl">
 
-        
+
         {/* Ícono de carrito */}
-        <div className="mb-6">
+        <div className='mt-15'>
           <Image
-             src={order}
-             alt="Shopping cart"
-             width={100}
-             height={100}
-             className="rounded-full"
-          
+            src={order}
+            alt="Shopping cart"
+            width={100}
+            height={100}
+            className="rounded-full"
+
           />
         </div>
 
         {/* Formulario */}
         <div className="flex flex-col space-y-4 w-full">
-          <label>USERNAME:</label>
+          <label>EMAIL:</label>
           <div className="border border-white/60 rounded-md px-4 py-2 flex items-center">
             <input
-              type="text"
-              placeholder="USERNAME"
+              type="email"
+              placeholder="plantaverde@correo.es"
               className="bg-transparent outline-none text-sm text-white placeholder-white/70 w-full"
             />
           </div>
@@ -41,7 +41,7 @@ export default function LoginPage() {
           <div className="border border-white/60 rounded-md px-4 py-2 flex items-center">
             <input
               type="password"
-              placeholder="PASSWORD"
+              placeholder="********"
               className="bg-transparent outline-none text-sm text-white placeholder-white/70 w-full"
             />
           </div>
