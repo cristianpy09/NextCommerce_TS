@@ -19,47 +19,46 @@ export default function ProductCard(props: Prop) {
   const idURL = params.id;
 
   return (
-    <div className="flex flex-col justify-between bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+    <article className="flex flex-col justify-between bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300">
       {/* Imagen del producto */}
-      <div className="relative w-full h-56 overflow-hidden">
+      <div className="relative w-full h-52 overflow-hidden">
         <img
           src={img}
           alt={name}
-          className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
+          className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
         />
       </div>
 
       {/* Contenido del producto */}
-      <div className="flex flex-col justify-between p-5 text-white">
+      <div className="flex flex-col justify-between p-4 text-gray-800">
         <div>
-          <h3 className="text-xl font-semibold mb-1">{name}</h3>
-          <p className="text-sm text-gray-300 line-clamp-2 mb-3">
+          <h3 className="text-lg font-semibold mb-1">{name}</h3>
+          <p className="text-sm text-gray-500 line-clamp-2 mb-3">
             {description || "Producto sin descripción disponible."}
           </p>
         </div>
 
         <div className="flex items-center justify-between mt-auto">
-          <span className="text-lg font-bold bg-linear-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+          <span className="text-lg font-bold text-blue-600">
             ${price?.toFixed(2)}
           </span>
-          <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/20 border border-white/30">
+          <span className="text-xs font-medium px-3 py-1 rounded-full bg-blue-100 text-blue-700">
             {category}
           </span>
         </div>
       </div>
 
-      {/* Pie con acciones o etiquetas */}
-      <div className="flex items-center justify-between px-5 py-3 border-t border-white/10 bg-white/5 text-sm text-gray-300">
+      {/* Pie con acciones */}
+      <div className="flex items-center justify-between px-4 py-3 border-t border-gray-100 bg-gray-50 text-sm text-gray-600">
         <span className="uppercase tracking-wider text-xs text-gray-400">
           SKU: {sku}
         </span>
         <button
-          style={{ backgroundColor: "#3f50b5" }}
-          className="px-4 py-1.5 rounded-lg text-white font-medium text-sm hover:opacity-90 transition cursor-pointer"
+          className="px-4 py-1.5 rounded-lg bg-blue-600 text-white font-medium text-sm hover:bg-blue-700 transition cursor-pointer"
         >
           Ver Detalles
         </button>
       </div>
-    </div>
+    </article>
   );
 }

@@ -3,8 +3,8 @@ import ProductList from '../components/ProductList'
 
 export default function Dashboard() {
   return (
-    <div className='mt-16'>
+    <section className='mt-16'>
         <ProductList/>
-    </div>
+    </section>
   )
 }

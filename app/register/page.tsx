@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import Image from "next/image";
-import order from '@/public/images/order_14379893.png'
+import order from "@/public/images/order_14379893.png";
 
 export default function RegisterPage() {
   return (
@@ -8,12 +8,8 @@ export default function RegisterPage() {
       {/* Fondo con ondas suaves */}
       <div className="absolute inset-0 bg-linear-to-br from-[#1A2980] to-[#26D0CE] opacity-90"></div>
 
-
-
       {/* Contenedor principal */}
       <div className="relative z-10 flex flex-col items-center justify-center bg-linear-to-br from-[#182848] to-[#499daa] p-6 rounded-2xl text-white  backdrop-blur-md h-[500px] w-[350px] border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.6)] ">
-
-
         {/* Ícono de carrito */}
         <div>
           <Image
@@ -22,7 +18,6 @@ export default function RegisterPage() {
             width={100}
             height={100}
             className="rounded-full"
-
           />
         </div>
 
