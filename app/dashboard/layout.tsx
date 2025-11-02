@@ -11,18 +11,17 @@ export default function DashboardLayout({
 }>) {
   return (
     <body>
-        <Header />
+      <Header />
       <aside>
         <div className="drawer lg:drawer-open">
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center">
-            
             {children}
             <label
               htmlFor="my-drawer-3"
               className="btn drawer-button lg:hidden"
             >
-              Open drawer
+              Open 
             </label>
           </div>
           <div className="drawer-side">
