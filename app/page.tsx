@@ -17,11 +17,11 @@ export default function HomePage() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-          <button onClick={() => router.push("/login")}>
+          <button className="cursor-pointer bg-white text-[#264ECA] font-semibold p-2 mt-2 py-2 rounded-md shadow hover:bg-gray-100 transition-all" onClick={() => router.push("/login")}>
             {" "}
             iniciar sesion
           </button>
-          <button onClick={() => router.push("/register")}> registrarse</button>
+          <button className="cursor-pointer bg-white text-[#264ECA] font-semibold p-2 mt-2 py-2 rounded-md shadow transition-all hover:bg-[#e4e4e4]" onClick={() => router.push("/register")}> registrarse</button>
         </div>
       </section>
 
