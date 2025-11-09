@@ -1,13 +1,18 @@
 import React from 'react'
+import SearchBar from './SearchBar'
+import Link from 'next/link'
 
 export default function Header() {
   return (
     <header>
-        <div className="navbar fixed top-0 left-0 w-full z-50 bg-base-100 shadow-sm  ">
+        <div className="navbar fixed top-0 left-0 w-full z-50 bg-blue-100 shadow-sm  ">
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl">Ecomerce-Lite</a>
+    <Link className="btn btn-ghost text-xl" href="/dashboard" >
+      Ecomerce-Lite
+    </Link>
   </div>
-  <div className="flex-none">
+  <div className="flex">
+    <SearchBar/>
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <div className="indicator">

@@ -8,7 +8,7 @@ export default function Dashboard() {
     <section className="mt-16">
       <div className=" ml-6 mt-4 flex space-x-16">
         <FilterBar />
-        <SearchBar />
+        
       </div>
 
       <ProductList />
