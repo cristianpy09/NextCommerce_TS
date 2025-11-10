@@ -1,8 +1,15 @@
+"use client"
 import React from 'react'
 import SearchBar from './SearchBar'
 import Link from 'next/link'
+import { logoutUser } from '../utils/auth';
 
 export default function Header() {
+
+  const handleLogout = () => {
+    logoutUser();
+    window.location.href = "/login";
+  };
   return (
     <header>
         <div className="navbar fixed top-0 left-0 w-full z-50 bg-blue-100 shadow-sm  ">
@@ -50,7 +57,7 @@ export default function Header() {
           </a>
         </li>
         <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><button onClick={handleLogout}>Logout</button></li>
       </ul>
     </div>
   </div>
