@@ -21,7 +21,7 @@ export default function DashboardLayout({
               htmlFor="my-drawer-3"
               className="btn drawer-button lg:hidden"
             >
-              Open 
+              Open
             </label>
           </div>
           <div className="drawer-side mt-16">

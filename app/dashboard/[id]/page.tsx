@@ -9,23 +9,24 @@ interface Props {
   };
 }
 
-export default async function ProductDetailpage({params}:Props) {
-      const data = products
-      const {id}= await params
-     const producto = data.find((p) => p.sku === id);
+export default async function ProductDetailpage({ params }: Props) {
+  const data = products
+  const { id } = await params
+  const producto = data.find((p) => p.sku === id);
 
-   
-    
- 
 
- if (producto) {
-    
- return (
-    <div>
+
+
+
+  if (producto) {
+
+    return (
+      <div>
 
         <ProductCard name={producto.name} category={producto.category} description={producto.description} price={producto.price} img={producto.imageUrl} />
-    </div>
+      </div>
 
-  ) } 
+    )
+  }
 
 }
