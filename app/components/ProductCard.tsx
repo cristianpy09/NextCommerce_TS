@@ -55,6 +55,7 @@ export default function ProductCard(props: Prop) {
           SKU: {sku}
         </span>
         <Link href={`/dashboard/${sku}`}>
+   
         <button
           className="px-4 py-1.5 rounded-lg bg-blue-600 text-white font-medium text-sm hover:bg-blue-700 transition cursor-pointer"
           >

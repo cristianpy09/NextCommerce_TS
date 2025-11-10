@@ -1,11 +1,27 @@
+
 import { users } from "../data/users";
+import { User } from "../types/usersType";
 
-import { redirect } from "next/navigation";
+export function authenticate(email: string): User | null {
+  const user = users.find(
+    (u) => u.email === email 
+  );
+  return user || null;
+}
 
-export default function auth(email: string) {
-  const user = users.find((user) => user.email === email);
+export function loginUser(user: User) {
+  localStorage.setItem("user", JSON.stringify(user));
+}
 
-  if (user?.email === "alice.johnson@mail.com") {
-    return redirect("/dashboard");
-  }
+export function logoutUser() {
+  localStorage.removeItem("user");
+}
+
+export function getCurrentUser(): User | null {
+  const stored = localStorage.getItem("user");
+  return stored ? JSON.parse(stored) : null;
+}
+
+export function isAuthenticated(): boolean {
+  return !!getCurrentUser();
 }
