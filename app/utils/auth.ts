@@ -1,4 +1,4 @@
-import { Router } from "next/router";
+
 import { users } from "../data/users";
 import { User } from "../types/usersType";
 import { redirect } from "next/navigation";
