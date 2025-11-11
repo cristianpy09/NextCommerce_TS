@@ -54,7 +54,7 @@ export default function ProductCard(props: Prop) {
         <span className="uppercase tracking-wider text-xs text-gray-400">
           SKU: {sku}
         </span>
-        <Link href={`/dashboard/${sku}`}>
+        <Link href={`/${sku}`}>
        <button
             className="px-4 py-1.5 rounded-lg bg-blue-600 text-white font-medium text-sm hover:bg-blue-700 transition cursor-pointer"
           >
