@@ -15,7 +15,7 @@ export default function Header() {
         </div>
         <div className="flex">
           <SearchBar />
-          <Link href="/dashboard/cart">
+          <Link href="/cart">
             <div className="dropdown dropdown-end">
               <div
                 tabIndex={0}
