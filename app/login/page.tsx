@@ -1,11 +1,13 @@
-"use client";
+"use client"
 import { useForm, SubmitHandler } from "react-hook-form";
 import React from "react";
 import Image from "next/image";
 import order from "@/public/images/order_14379893.png";
-import { authenticate, loginUser } from "../utils/auth";
-import { Router } from "next/router";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { auth } from "../utils/auth";
+
+
+
 
 
 type Inputs = {
@@ -14,23 +16,21 @@ type Inputs = {
 };
 
 export default function LoginPage() {
-  const router = useRouter();
+  
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data: Inputs) => {
-    const user = authenticate(data.email);
 
-    if (user) {
-      loginUser(user)
-      router.push("/dashboard")
-    }else {
-      alert("Credenciales incorrectas");
-    }
-  };
+  
+  
+  const onSubmit =(data:Inputs)=>{
+    const {email,password}=data
+
+    auth(email)
+  }
 
 
   return (
@@ -75,9 +75,11 @@ export default function LoginPage() {
             />
           </div>
 
-          <button className="bg-white text-[#264ECA] font-semibold mt-5 py-2 cursor-pointer rounded-md shadow hover:bg-gray-100 transition-all">
+        
+        <button className="cursor-pointer" >
             LOGIN
           </button>
+        
         </form>
 
         {/* Enlace inferior */}
