@@ -9,7 +9,7 @@ export default function Header() {
     <header>
       <div className="navbar fixed top-0 left-0 w-full z-50 bg-blue-100 shadow-sm  ">
         <div className="flex-1">
-          <Link className="btn btn-ghost text-xl" href="/dashboard">
+          <Link className="btn btn-ghost text-xl" href="/">
             Ecomerce-Lite
           </Link>
         </div>
