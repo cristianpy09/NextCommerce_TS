@@ -1,9 +1,9 @@
 "use client"
 
-import { withAuth } from '@/app/utils/withAuth';
+
 import React from 'react'
 
- function Cartpage() {
+ export default function Cartpage() {
   return (
     <div>
         
@@ -12,4 +12,3 @@ import React from 'react'
 }
 
 
-export default withAuth(Cartpage);
