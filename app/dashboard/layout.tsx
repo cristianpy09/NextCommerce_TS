@@ -11,14 +11,14 @@ export default function DashboardLayout({
   return (
     <div>
       <Header />
-      <aside className="bg-yellow-300" >
+      <aside className="bg-yellow-300">
         <div className="drawer lg:drawer-open ">
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center ">
             {children}
             <label
               htmlFor="my-drawer-3"
-              className="btn drawer-button lg:hidden " 
+              className="btn drawer-button lg:hidden "
             >
               Open
             </label>
@@ -31,7 +31,7 @@ export default function DashboardLayout({
             ></label>
             <ul className="menu bg-gray rounded-box w-80">
               <li>
-                <a>Item 1</a>
+                <a>Computers</a>
               </li>
               <li>
                 <details open>
@@ -60,7 +60,36 @@ export default function DashboardLayout({
                 </details>
               </li>
               <li>
-                <a>Item 3</a>
+                <a>Tablets</a>
+              </li>
+              <li>
+                <details open>
+                  <summary>Parent</summary>
+                  <ul>
+                    <li>
+                      <a>Submenu 1</a>
+                    </li>
+                    <li>
+                      <a>Submenu 2</a>
+                    </li>
+                    <li>
+                      <details open>
+                        <summary>Parent</summary>
+                        <ul>
+                          <li>
+                            <a>Submenu 1</a>
+                          </li>
+                          <li>
+                            <a>Submenu 2</a>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <a>Computers</a>
               </li>
               <li>
                 <details open>
