@@ -5,10 +5,10 @@ import SearchBar from "../components/SearchBar";
 
 
 export default function Dashboard() {
- 
+
   return (
     <section className="mt-16">
-      <div className=" ml-6 bg-red-500 mt-4 flex space-x-16">
+      <div className=" ml-7 bg-red-500 mt-4 flex space-x-16">
         <FilterBar />
       </div>
 
