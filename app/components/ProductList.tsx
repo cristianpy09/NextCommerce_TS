@@ -7,11 +7,11 @@ export default function ProductList() {
   const data = products;
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50 p-10">
+    <div className="flex justify-center items-center min-h-screen bg-blue-400 w-screen p-5 ">
       <section
-        className="w-full max-w-7xl 
-        grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
-        gap-8 justify-items-center"
+        className="w-full max-w-375
+        grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 
+        gap-5 justify-items-center"
       >
         {data.map((u: Product) => (
           <ProductCard

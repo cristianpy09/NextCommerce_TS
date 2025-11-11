@@ -11,25 +11,25 @@ export default function DashboardLayout({
   return (
     <div>
       <Header />
-      <aside>
+      <aside className="bg-yellow-300" >
         <div className="drawer lg:drawer-open ">
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-          <div className="drawer-content flex flex-col items-center justify-center">
+          <div className="drawer-content flex flex-col items-center justify-center ">
             {children}
             <label
               htmlFor="my-drawer-3"
-              className="btn drawer-button lg:hidden"
+              className="btn drawer-button lg:hidden " 
             >
               Open
             </label>
           </div>
-          <div className="drawer-side mt-16">
+          <div className="drawer-side mt-16 bg-amber-100 ">
             <label
               htmlFor="my-drawer-3"
               aria-label="close sidebar"
               className="drawer-overlay"
             ></label>
-            <ul className="menu bg-gray rounded-box w-56">
+            <ul className="menu bg-gray rounded-box w-80">
               <li>
                 <a>Item 1</a>
               </li>
