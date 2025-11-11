@@ -17,7 +17,7 @@ import { getCurrentUser } from "../utils/auth";
       </div>
 
         <ProductList />
-      </div>
+     
     </section>
   );
 }

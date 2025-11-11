@@ -3,16 +3,15 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import Header from "../components/Header";
 
-
 export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <body>
+    <div>
       <Header />
-      <aside >
+      <aside>
         <div className="drawer lg:drawer-open ">
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center">
@@ -30,18 +29,69 @@ export default function DashboardLayout({
               aria-label="close sidebar"
               className="drawer-overlay"
             ></label>
-            <ul className="menu bg-base-200 min-h-full w-80 p-4">
-              {/* Sidebar content here */}
+            <ul className="menu bg-gray rounded-box w-56">
               <li>
-                <a>Sidebar Item 1</a>
+                <a>Item 1</a>
               </li>
               <li>
-                <a>Sidebar Item 2</a>
+                <details open>
+                  <summary>Parent</summary>
+                  <ul>
+                    <li>
+                      <a>Submenu 1</a>
+                    </li>
+                    <li>
+                      <a>Submenu 2</a>
+                    </li>
+                    <li>
+                      <details open>
+                        <summary>Parent</summary>
+                        <ul>
+                          <li>
+                            <a>Submenu 1</a>
+                          </li>
+                          <li>
+                            <a>Submenu 2</a>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <a>Item 3</a>
+              </li>
+              <li>
+                <details open>
+                  <summary>Parent</summary>
+                  <ul>
+                    <li>
+                      <a>Submenu 1</a>
+                    </li>
+                    <li>
+                      <a>Submenu 2</a>
+                    </li>
+                    <li>
+                      <details open>
+                        <summary>Parent</summary>
+                        <ul>
+                          <li>
+                            <a>Submenu 1</a>
+                          </li>
+                          <li>
+                            <a>Submenu 2</a>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
               </li>
             </ul>
           </div>
         </div>
       </aside>
-    </body>
+    </div>
   );
 }
