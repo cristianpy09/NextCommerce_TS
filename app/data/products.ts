@@ -9,7 +9,7 @@ export const products: Product[] = [
     price: 19.99,
     isActive: true,
     category: "Ropa",
-    imageUrl: "https://www.kindpng.com/picc/m/619-6193928_fristads-acode-v-neck-t-shirt-1913-bsj.png",
+    imageUrl: "https://www.kindpng.com/picc/m/299-2992482_zapato-doble-hebilla-negro-mate-class-lazyload-lazyload.png",
     createdAt: Date.now(),
     description: "Camiseta de algodón, color rojo",
     tags: ["ropa", "verano"],
