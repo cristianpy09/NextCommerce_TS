@@ -10,6 +10,4 @@ function Get(id:number) {
     )
 }
 
-function name(params:type) {
-    
-}
+
