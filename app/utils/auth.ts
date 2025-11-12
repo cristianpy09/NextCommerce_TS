@@ -9,6 +9,10 @@ export function auth(email: string) {
   const user = data.find((u) => u?.email === email);
 
   if (user) {
-    return redirect("/")
-  }
+    
+    return(
+      alert("Credenciales correctas"),
+      redirect("/")
+    ) 
+    }else alert("Creddenciales incorrectas")
 }
