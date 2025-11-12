@@ -89,7 +89,7 @@ export default function DashboardLayout({
                 </details>
               </li>
               <li>
-                <a>Computers</a>
+                <a>others</a>
               </li>
               <li>
                 <details open>
