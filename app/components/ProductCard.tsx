@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import Button from "./Button";
 
 type Prop = {
   name: string;
@@ -55,11 +56,9 @@ export default function ProductCard(props: Prop) {
           SKU: {sku}
         </span>
         <Link href={`/${sku}`}>
-       <button
-            className="px-4 py-1.5 rounded-lg bg-blue-600 text-white font-medium text-sm hover:bg-blue-700 transition cursor-pointer"
-          >
-            Ver Detalles
-          </button>
+       <Button text="ver detalles" size={"md"} variant={"primary"}/>
+            
+          
         </Link>
       </div>
     </article>
