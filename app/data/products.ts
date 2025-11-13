@@ -9,7 +9,7 @@ export const products: Product[] = [
     price: 19.99,
     isActive: true,
     category: "Ropa",
-    imageUrl: "https://www.kindpng.com/picc/m/299-2992482_zapato-doble-hebilla-negro-mate-class-lazyload-lazyload.png",
+    imageUrl: "https://ferrocanosuministros.es/16366-large_default/camiseta-roja-manga-corta-algodon-190gm.jpg",
     createdAt: Date.now(),
     description: "Camiseta de algodón, color rojo",
     detailedDescription: "Esta camiseta roja de MarcaX está confeccionada con algodón 100% de alta calidad, lo que garantiza una textura suave y transpirable ideal para los días cálidos. Su diseño clásico con cuello redondo y corte regular se adapta cómodamente a diferentes tipos de cuerpo, brindando libertad de movimiento sin perder estilo. Los acabados en las costuras ofrecen una excelente durabilidad incluso tras varios lavados. Es una prenda versátil que combina fácilmente con jeans, pantalones cortos o faldas, perfecta tanto para uso casual como para actividades al aire libre. Fabricada por Textiles del Norte S.A., esta camiseta representa el equilibrio entre comodidad, calidad y diseño moderno.",

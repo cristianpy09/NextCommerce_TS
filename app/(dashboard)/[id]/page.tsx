@@ -21,13 +21,26 @@ export default async function ProductDetailpage({ params }: Props) {
 
 
   if (producto) {
-
     return (
       <div>
-
-        <DetailsCard name={producto.name} category={producto.category} description={producto.description} price={producto.price} img={producto.imageUrl} />
+        <DetailsCard
+          name={producto.name}
+          category={producto.category}
+          description={producto.description}
+          detailedDescription={producto.detailedDescription}
+          price={producto.price}
+          img={producto.imageUrl}
+          sku={producto.sku}
+          color={producto.color}
+          material={producto.material}
+          dimensions={producto.dimensions}
+          manufacturer={producto.manufacturer}
+          brand={producto.brand}
+          rating={producto.rating}
+          reviews={producto.reviews}
+          tags={producto.tags}
+        />
       </div>
-
     )
   }
 
