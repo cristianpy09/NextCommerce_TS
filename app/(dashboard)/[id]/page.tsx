@@ -1,4 +1,6 @@
+import DetailsCard from '@/app/components/DetailsCard';
 import ProductCard from '@/app/components/ProductCard';
+import ProductCardView from '@/app/components/ProductCardView';
 import { products } from '@/app/data/products';
 import { Product } from '@/app/types/productsType';
 import React from 'react'
@@ -23,7 +25,7 @@ export default async function ProductDetailpage({ params }: Props) {
     return (
       <div>
 
-        <ProductCard name={producto.name} category={producto.category} description={producto.description} price={producto.price} img={producto.imageUrl} />
+        <DetailsCard name={producto.name} category={producto.category} description={producto.description} price={producto.price} img={producto.imageUrl} />
       </div>
 
     )
