@@ -7,11 +7,28 @@ type Prop = {
   name: string;
   img?: string;
   description?: string;
+  detailedDescription?: string;
   category?: string;
   price?: number;
   sku?: string;
   id?: number;
   onAddToCartAction?: (qty?: number) => void;
+  color?: string;
+  material?: string;
+  dimensions?: {
+    width: number;
+    height: number;
+    depth: number;
+  };
+  manufacturer?: string;
+  brand?: string;
+  rating?: number;
+  reviews?: {
+    username: string;
+    comment: string;
+    rating: number;
+  }[];
+  tags?: string[];
 };
 
 export default function DetailsCard(props: Prop) {
@@ -42,16 +59,7 @@ export default function DetailsCard(props: Prop) {
   };
 
   return (
-    <div>
-      {/* Breadcrumb que lleva a productos */}
-      <nav className="text-sm text-gray-400 mb-4">
-        <Link href="/dashboard" className="hover:underline text-blue-400">
-          Home
-        </Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-200">{props.name}</span>
-      </nav>
-
+    <div className="min-h-screen bg-gray-50 py-8 px-4">
       <ProductCardView {...props} mode="detail" onAddToCartAction={addToCart} />
     </div>
   );

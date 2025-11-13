@@ -11,7 +11,7 @@ export default function DashboardLayout({
   return (
     <div>
       <Header />
-      <aside className="bg-yellow-300">
+      <aside>
         <div className="drawer lg:drawer-open ">
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center ">
