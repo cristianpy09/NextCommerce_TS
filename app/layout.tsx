@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { roboto } from "./fonts/fonts";
 
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html data-theme="corporate" lang="es">
+    <html data-theme="corporate" lang="es" className={roboto.className}>
       <body
       >
         {children}
