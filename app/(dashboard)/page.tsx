@@ -1,14 +1,11 @@
-
 import ProductList from "../components/ProductList";
 import FilterBar from "../components/FilterBar";
 import SearchBar from "../components/SearchBar";
 
-
 export default function Dashboard() {
-
   return (
     <section className="mt-16">
-      <div className=" ml-7 bg-red-500 mt-4 flex space-x-16">
+      <div className=" justify-center ml-7 bg-[#8F8681]  flex space-x-16">
         <FilterBar />
       </div>
 
@@ -16,4 +13,3 @@ export default function Dashboard() {
     </section>
   );
 }
-

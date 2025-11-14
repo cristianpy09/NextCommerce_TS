@@ -9,10 +9,12 @@ export const products: Product[] = [
     price: 19.99,
     isActive: true,
     category: "Ropa",
-    imageUrl: "https://ferrocanosuministros.es/16366-large_default/camiseta-roja-manga-corta-algodon-190gm.jpg",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/299-2992482_zapato-doble-hebilla-negro-mate-class-lazyload-lazyload.png",
     createdAt: Date.now(),
     description: "Camiseta de algodón, color rojo",
-    detailedDescription: "Esta camiseta roja de MarcaX está confeccionada con algodón 100% de alta calidad, lo que garantiza una textura suave y transpirable ideal para los días cálidos. Su diseño clásico con cuello redondo y corte regular se adapta cómodamente a diferentes tipos de cuerpo, brindando libertad de movimiento sin perder estilo. Los acabados en las costuras ofrecen una excelente durabilidad incluso tras varios lavados. Es una prenda versátil que combina fácilmente con jeans, pantalones cortos o faldas, perfecta tanto para uso casual como para actividades al aire libre. Fabricada por Textiles del Norte S.A., esta camiseta representa el equilibrio entre comodidad, calidad y diseño moderno.",
+    detailedDescription:
+      "Esta camiseta roja de MarcaX está confeccionada con algodón 100% de alta calidad, lo que garantiza una textura suave y transpirable ideal para los días cálidos. Su diseño clásico con cuello redondo y corte regular se adapta cómodamente a diferentes tipos de cuerpo, brindando libertad de movimiento sin perder estilo. Los acabados en las costuras ofrecen una excelente durabilidad incluso tras varios lavados. Es una prenda versátil que combina fácilmente con jeans, pantalones cortos o faldas, perfecta tanto para uso casual como para actividades al aire libre. Fabricada por Textiles del Norte S.A., esta camiseta representa el equilibrio entre comodidad, calidad y diseño moderno.",
     tags: ["ropa", "verano"],
     dimensions: { width: 30, height: 40, depth: 1 },
     material: "Algodón",
@@ -28,7 +30,8 @@ export const products: Product[] = [
       },
       {
         username: "LauraG",
-        comment: "El color es un poco más oscuro que en la foto, pero igual me gustó.",
+        comment:
+          "El color es un poco más oscuro que en la foto, pero igual me gustó.",
         rating: 4,
       },
     ],
@@ -41,10 +44,13 @@ export const products: Product[] = [
     price: 49.99,
     isActive: true,
     category: "Calzado",
-    imageUrl: "https://www.kindpng.com/picc/m/299-2992482_zapato-doble-hebilla-negro-mate-class-lazyload-lazyload.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/299-2992482_zapato-doble-hebilla-negro-mate-class-lazyload-lazyload.png",
     createdAt: Date.now(),
-    description: "Zapatos elegantes de cuero negro, ideales para ocasiones formales.",
-    detailedDescription: "Los Zapatos Negros de MarcaY están confeccionados con cuero genuino de primera calidad, cuidadosamente tratado para ofrecer un acabado brillante y una textura suave al tacto. Su diseño clásico con doble hebilla aporta un toque de distinción, perfecto para eventos formales, reuniones de trabajo o celebraciones especiales. El interior está forrado con materiales transpirables y una plantilla ergonómica que proporciona comodidad durante todo el día, reduciendo la fatiga del pie. La suela antideslizante de goma garantiza una pisada firme y segura en diferentes superficies. Fabricados por Calzados Premium S.A., estos zapatos combinan elegancia, resistencia y confort en una sola pieza, convirtiéndose en un esencial del guardarropa masculino moderno.",
+    description:
+      "Zapatos elegantes de cuero negro, ideales para ocasiones formales.",
+    detailedDescription:
+      "Los Zapatos Negros de MarcaY están confeccionados con cuero genuino de primera calidad, cuidadosamente tratado para ofrecer un acabado brillante y una textura suave al tacto. Su diseño clásico con doble hebilla aporta un toque de distinción, perfecto para eventos formales, reuniones de trabajo o celebraciones especiales. El interior está forrado con materiales transpirables y una plantilla ergonómica que proporciona comodidad durante todo el día, reduciendo la fatiga del pie. La suela antideslizante de goma garantiza una pisada firme y segura en diferentes superficies. Fabricados por Calzados Premium S.A., estos zapatos combinan elegancia, resistencia y confort en una sola pieza, convirtiéndose en un esencial del guardarropa masculino moderno.",
     tags: ["calzado", "formal", "cuero"],
     dimensions: { width: 35, height: 12, depth: 20 },
     material: "Cuero genuino",
@@ -73,10 +79,12 @@ export const products: Product[] = [
     price: 79.99,
     isActive: true,
     category: "Electrónica",
-    imageUrl: "https://www.kindpng.com/picc/m/460-4603107_samsung-akg-n700-hd-png-download.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/460-4603107_samsung-akg-n700-hd-png-download.png",
     createdAt: Date.now(),
     description: "Auriculares inalámbricos con cancelación de ruido.",
-    detailedDescription: "Los auriculares inalámbricos SoundMagic combinan tecnología de punta con diseño ergonómico para ofrecer una experiencia de audio excepcional. Equipados con cancelación activa de ruido, permiten disfrutar de música y llamadas sin interrupciones del entorno. Su conectividad Bluetooth de última generación asegura una conexión estable y rápida con cualquier dispositivo compatible. La batería de larga duración ofrece horas continuas de reproducción, mientras que los materiales de alta calidad, incluyendo plástico ABS y metal, garantizan resistencia y comodidad durante su uso prolongado. Perfectos para música, videojuegos o trabajo remoto, estos auriculares representan un equilibrio entre estilo, funcionalidad y rendimiento de sonido superior.",
+    detailedDescription:
+      "Los auriculares inalámbricos SoundMagic combinan tecnología de punta con diseño ergonómico para ofrecer una experiencia de audio excepcional. Equipados con cancelación activa de ruido, permiten disfrutar de música y llamadas sin interrupciones del entorno. Su conectividad Bluetooth de última generación asegura una conexión estable y rápida con cualquier dispositivo compatible. La batería de larga duración ofrece horas continuas de reproducción, mientras que los materiales de alta calidad, incluyendo plástico ABS y metal, garantizan resistencia y comodidad durante su uso prolongado. Perfectos para música, videojuegos o trabajo remoto, estos auriculares representan un equilibrio entre estilo, funcionalidad y rendimiento de sonido superior.",
     tags: ["audio", "wireless", "bluetooth", "tecnología"],
     dimensions: { width: 18, height: 20, depth: 8 },
     material: "Plástico ABS y metal",
@@ -92,7 +100,8 @@ export const products: Product[] = [
       },
       {
         username: "MariaTech",
-        comment: "Buena calidad, aunque algo grandes para llevar en el bolsillo.",
+        comment:
+          "Buena calidad, aunque algo grandes para llevar en el bolsillo.",
         rating: 4,
       },
     ],
@@ -105,10 +114,13 @@ export const products: Product[] = [
     price: 199.99,
     isActive: true,
     category: "Wearables",
-    imageUrl: "https://www.kindpng.com/picc/m/309-3093925_thumb-image-hd-png-download.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/309-3093925_thumb-image-hd-png-download.png",
     createdAt: Date.now(),
-    description: "Reloj inteligente con monitoreo de actividad y notificaciones.",
-    detailedDescription: "El Smartwatch Pro de TimeTech combina estilo moderno con funcionalidades avanzadas de monitoreo de salud y fitness. Incluye seguimiento de pasos, frecuencia cardíaca, calorías quemadas, calidad del sueño y más. Permite recibir notificaciones de llamadas, mensajes y aplicaciones directamente en la muñeca, manteniéndote conectado sin sacar el teléfono. Fabricado con aluminio resistente y correa de silicona, ofrece comodidad durante todo el día y resistencia al agua. Su pantalla táctil a color es clara y sensible, y la batería de larga duración asegura varios días de uso con una sola carga. Ideal tanto para deportistas como para quienes buscan un asistente inteligente diario.",
+    description:
+      "Reloj inteligente con monitoreo de actividad y notificaciones.",
+    detailedDescription:
+      "El Smartwatch Pro de TimeTech combina estilo moderno con funcionalidades avanzadas de monitoreo de salud y fitness. Incluye seguimiento de pasos, frecuencia cardíaca, calorías quemadas, calidad del sueño y más. Permite recibir notificaciones de llamadas, mensajes y aplicaciones directamente en la muñeca, manteniéndote conectado sin sacar el teléfono. Fabricado con aluminio resistente y correa de silicona, ofrece comodidad durante todo el día y resistencia al agua. Su pantalla táctil a color es clara y sensible, y la batería de larga duración asegura varios días de uso con una sola carga. Ideal tanto para deportistas como para quienes buscan un asistente inteligente diario.",
     tags: ["fitness", "wearable"],
     material: "Aluminio y silicona",
     manufacturer: "TimeTech Innovations Ltd.",
@@ -137,10 +149,12 @@ export const products: Product[] = [
     price: 89.99,
     isActive: true,
     category: "Computación",
-    imageUrl: "https://www.kindpng.com/picc/m/7-77839_png-black-and-white-download-best-mechanical-pc.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/7-77839_png-black-and-white-download-best-mechanical-pc.png",
     createdAt: Date.now(),
     description: "Teclado mecánico con retroiluminación y teclas programables.",
-    detailedDescription: "El Teclado Mecánico KeyMasters está diseñado para gamers y profesionales que buscan precisión y personalización. Sus switches mecánicos proporcionan una respuesta táctil rápida y duradera, mientras que la retroiluminación RGB permite personalizar los colores y efectos de las teclas. Incluye teclas programables para macros y funciones rápidas, mejorando la eficiencia en juegos y trabajo. Fabricado con plástico ABS resistente, combina durabilidad con un diseño elegante y moderno. Su estructura robusta y anti-deslizante asegura estabilidad incluso en sesiones intensas de uso prolongado.",
+    detailedDescription:
+      "El Teclado Mecánico KeyMasters está diseñado para gamers y profesionales que buscan precisión y personalización. Sus switches mecánicos proporcionan una respuesta táctil rápida y duradera, mientras que la retroiluminación RGB permite personalizar los colores y efectos de las teclas. Incluye teclas programables para macros y funciones rápidas, mejorando la eficiencia en juegos y trabajo. Fabricado con plástico ABS resistente, combina durabilidad con un diseño elegante y moderno. Su estructura robusta y anti-deslizante asegura estabilidad incluso en sesiones intensas de uso prolongado.",
     tags: ["gaming", "computación", "hardware"],
     material: "Plástico ABS y switches mecánicos",
     manufacturer: "KeyMasters Tech Co.",
@@ -151,7 +165,8 @@ export const products: Product[] = [
     reviews: [
       {
         username: "GamerAlex",
-        comment: "Excelente respuesta de teclas y la iluminación RGB es genial.",
+        comment:
+          "Excelente respuesta de teclas y la iluminación RGB es genial.",
         rating: 5,
       },
       {
@@ -169,10 +184,12 @@ export const products: Product[] = [
     price: 49.99,
     isActive: true,
     category: "Computación",
-    imageUrl: "https://www.kindpng.com/picc/m/175-1757455_rival-300-black-gamer-mouse-3-side-buttons.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/175-1757455_rival-300-black-gamer-mouse-3-side-buttons.png",
     createdAt: Date.now(),
     description: "Mouse ergonómico con iluminación RGB y alta precisión.",
-    detailedDescription: "El Mouse Gamer RGB de GamerZone está diseñado para proporcionar un control absoluto durante largas sesiones de juego. Su diseño ergonómico y liviano reduce la fatiga de la mano, mientras que los materiales antideslizantes garantizan un agarre seguro incluso en momentos de máxima intensidad. La precisión del sensor es excepcional, permitiendo ajustes de DPI rápidos y personalizados según las necesidades del jugador. Además, la retroiluminación RGB personalizable añade un toque visual único a tu setup de gaming, permitiendo elegir entre una variedad de colores y efectos. Este mouse es perfecto tanto para gamers casuales como para los más competitivos, buscando precisión, confort y estilo en un solo dispositivo.",
+    detailedDescription:
+      "El Mouse Gamer RGB de GamerZone está diseñado para proporcionar un control absoluto durante largas sesiones de juego. Su diseño ergonómico y liviano reduce la fatiga de la mano, mientras que los materiales antideslizantes garantizan un agarre seguro incluso en momentos de máxima intensidad. La precisión del sensor es excepcional, permitiendo ajustes de DPI rápidos y personalizados según las necesidades del jugador. Además, la retroiluminación RGB personalizable añade un toque visual único a tu setup de gaming, permitiendo elegir entre una variedad de colores y efectos. Este mouse es perfecto tanto para gamers casuales como para los más competitivos, buscando precisión, confort y estilo en un solo dispositivo.",
     tags: ["gaming", "rgb"],
     material: "Plástico ABS y caucho antideslizante",
     manufacturer: "GamerZone Tech Ltd.",
@@ -188,7 +205,8 @@ export const products: Product[] = [
       },
       {
         username: "NinaPlays",
-        comment: "Un poco más pesado de lo que esperaba, pero aún así excelente.",
+        comment:
+          "Un poco más pesado de lo que esperaba, pero aún así excelente.",
         rating: 4,
       },
     ],
@@ -201,10 +219,12 @@ export const products: Product[] = [
     price: 399.99,
     isActive: true,
     category: "Fotografía",
-    imageUrl: "https://www.kindpng.com/picc/m/301-3010226_digital-camera-hd-png-download.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/301-3010226_digital-camera-hd-png-download.png",
     createdAt: Date.now(),
     description: "Cámara digital de alta resolución con lente intercambiable.",
-    detailedDescription: "La Cámara Digital FotoSnap está diseñada para fotógrafos que buscan calidad profesional en un formato accesible. Con una resolución de alta definición, esta cámara captura imágenes nítidas y vibrantes en cualquier condición de luz. Su lente intercambiable te permite experimentar con diferentes tipos de enfoques y efectos, brindando versatilidad en cada sesión fotográfica. El cuerpo compacto y ergonómico facilita el manejo durante largas sesiones, mientras que su pantalla LCD de alta resolución permite ver con claridad cada toma. Ideal para fotógrafos amateurs y profesionales que desean un dispositivo portátil, pero con resultados de nivel profesional.",
+    detailedDescription:
+      "La Cámara Digital FotoSnap está diseñada para fotógrafos que buscan calidad profesional en un formato accesible. Con una resolución de alta definición, esta cámara captura imágenes nítidas y vibrantes en cualquier condición de luz. Su lente intercambiable te permite experimentar con diferentes tipos de enfoques y efectos, brindando versatilidad en cada sesión fotográfica. El cuerpo compacto y ergonómico facilita el manejo durante largas sesiones, mientras que su pantalla LCD de alta resolución permite ver con claridad cada toma. Ideal para fotógrafos amateurs y profesionales que desean un dispositivo portátil, pero con resultados de nivel profesional.",
     tags: ["fotografía", "digital", "resolución", "lente intercambiable"],
     material: "Plástico de alta resistencia y metal",
     manufacturer: "FotoSnap Technologies Ltd.",
@@ -220,7 +240,8 @@ export const products: Product[] = [
       },
       {
         username: "MariaFotos",
-        comment: "Gran cámara para iniciarse en fotografía, pero el lente adicional es algo caro.",
+        comment:
+          "Gran cámara para iniciarse en fotografía, pero el lente adicional es algo caro.",
         rating: 4,
       },
     ],
@@ -233,10 +254,13 @@ export const products: Product[] = [
     price: 1299.99,
     isActive: true,
     category: "Computación",
-    imageUrl: "https://www.kindpng.com/picc/m/106-1066670_laptop-intel-core-i5-lenovo-laptop-lenovo-g50.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/106-1066670_laptop-intel-core-i5-lenovo-laptop-lenovo-g50.png",
     createdAt: Date.now(),
-    description: "Laptop ultradelgada con alto rendimiento y gran portabilidad.",
-    detailedDescription: "La Laptop Ultrabook de TechPro está diseñada para aquellos que buscan una combinación perfecta de rendimiento, diseño y portabilidad. Con un procesador Intel Core i7 de última generación y una memoria RAM de 16GB, esta laptop ofrece un rendimiento fluido y rápido para tareas exigentes, desde la edición de video hasta el trabajo multitarea. Su pantalla Full HD de 13.3 pulgadas brinda imágenes nítidas y colores vibrantes, mientras que su cuerpo ultradelgado de solo 1.8 cm de grosor permite llevarla cómodamente en cualquier mochila o maletín. Con una batería de larga duración y almacenamiento SSD de 512GB, tendrás velocidad y espacio para todas tus aplicaciones y archivos. Ideal para profesionales, estudiantes y viajeros frecuentes que necesitan una herramienta poderosa y compacta para trabajar desde cualquier lugar.",
+    description:
+      "Laptop ultradelgada con alto rendimiento y gran portabilidad.",
+    detailedDescription:
+      "La Laptop Ultrabook de TechPro está diseñada para aquellos que buscan una combinación perfecta de rendimiento, diseño y portabilidad. Con un procesador Intel Core i7 de última generación y una memoria RAM de 16GB, esta laptop ofrece un rendimiento fluido y rápido para tareas exigentes, desde la edición de video hasta el trabajo multitarea. Su pantalla Full HD de 13.3 pulgadas brinda imágenes nítidas y colores vibrantes, mientras que su cuerpo ultradelgado de solo 1.8 cm de grosor permite llevarla cómodamente en cualquier mochila o maletín. Con una batería de larga duración y almacenamiento SSD de 512GB, tendrás velocidad y espacio para todas tus aplicaciones y archivos. Ideal para profesionales, estudiantes y viajeros frecuentes que necesitan una herramienta poderosa y compacta para trabajar desde cualquier lugar.",
     tags: ["computación", "ultrabook", "portátil", "alto rendimiento"],
     material: "Aluminio y plástico de alta calidad",
     manufacturer: "TechPro Inc.",
@@ -265,10 +289,13 @@ export const products: Product[] = [
     price: 299.99,
     isActive: true,
     category: "Electrónica",
-    imageUrl: "https://www.kindpng.com/picc/m/57-572657_experia-tablet-png-image-sony-xperia-tablet-z.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/57-572657_experia-tablet-png-image-sony-xperia-tablet-z.png",
     createdAt: Date.now(),
-    description: "Tablet de 10 pulgadas con pantalla táctil y procesador rápido.",
-    detailedDescription: "La Tablet 10'' de TabWorld es el dispositivo ideal para quienes buscan un equilibrio entre potencia y portabilidad. Con su pantalla táctil de 10 pulgadas, disfrutarás de una visualización nítida y colores vibrantes, perfecta para ver videos, navegar por internet o leer. Equipado con un procesador de última generación y 4GB de RAM, esta tablet ofrece un rendimiento fluido para tareas multitarea y aplicaciones exigentes. Su batería de larga duración te permite usarla todo el día sin preocuparte por la carga. El diseño delgado y ligero, combinado con un cuerpo resistente, la convierte en una opción excelente tanto para entretenimiento como para trabajo. Además, su sistema operativo Android asegura acceso a miles de aplicaciones en Google Play.",
+    description:
+      "Tablet de 10 pulgadas con pantalla táctil y procesador rápido.",
+    detailedDescription:
+      "La Tablet 10'' de TabWorld es el dispositivo ideal para quienes buscan un equilibrio entre potencia y portabilidad. Con su pantalla táctil de 10 pulgadas, disfrutarás de una visualización nítida y colores vibrantes, perfecta para ver videos, navegar por internet o leer. Equipado con un procesador de última generación y 4GB de RAM, esta tablet ofrece un rendimiento fluido para tareas multitarea y aplicaciones exigentes. Su batería de larga duración te permite usarla todo el día sin preocuparte por la carga. El diseño delgado y ligero, combinado con un cuerpo resistente, la convierte en una opción excelente tanto para entretenimiento como para trabajo. Además, su sistema operativo Android asegura acceso a miles de aplicaciones en Google Play.",
     tags: ["tablet", "touchscreen"],
     material: "Plástico y vidrio templado",
     manufacturer: "TabWorld Technologies",
@@ -284,7 +311,8 @@ export const products: Product[] = [
       },
       {
         username: "ClaudiaV",
-        comment: "Buen rendimiento, pero la resolución de la cámara podría ser mejor.",
+        comment:
+          "Buen rendimiento, pero la resolución de la cámara podría ser mejor.",
         rating: 4,
       },
     ],
@@ -297,10 +325,12 @@ export const products: Product[] = [
     price: 59.99,
     isActive: true,
     category: "Audio",
-    imageUrl: "https://www.kindpng.com/picc/m/601-6013129_altavoz-porttil-vieta-vm-bs28bk-con-hasta-7.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/601-6013129_altavoz-porttil-vieta-vm-bs28bk-con-hasta-7.png",
     createdAt: Date.now(),
     description: "Altavoz portátil con conexión Bluetooth y batería de 12h.",
-    detailedDescription: "El Altavoz Bluetooth SoundBox es el compañero perfecto para tus momentos de música sobre la marcha. Con una potente conexión Bluetooth, podrás sincronizarlo rápidamente con tu teléfono, tablet o laptop, y disfrutar de un sonido claro y potente en cualquier lugar. Su diseño portátil y resistente lo hace ideal para llevar a la playa, al parque o de viaje. La batería de larga duración de 12 horas garantiza que puedas disfrutar de tus canciones favoritas durante todo el día sin necesidad de recargar. Además, su construcción compacta y ligera permite transportarlo fácilmente sin ocupar mucho espacio en tu bolso o mochila. Con controles fáciles de usar y un sonido de alta calidad, es perfecto tanto para fiestas como para escuchar música en solitario.",
+    detailedDescription:
+      "El Altavoz Bluetooth SoundBox es el compañero perfecto para tus momentos de música sobre la marcha. Con una potente conexión Bluetooth, podrás sincronizarlo rápidamente con tu teléfono, tablet o laptop, y disfrutar de un sonido claro y potente en cualquier lugar. Su diseño portátil y resistente lo hace ideal para llevar a la playa, al parque o de viaje. La batería de larga duración de 12 horas garantiza que puedas disfrutar de tus canciones favoritas durante todo el día sin necesidad de recargar. Además, su construcción compacta y ligera permite transportarlo fácilmente sin ocupar mucho espacio en tu bolso o mochila. Con controles fáciles de usar y un sonido de alta calidad, es perfecto tanto para fiestas como para escuchar música en solitario.",
     tags: ["audio", "bluetooth", "portátil", "batería larga duración"],
     material: "Plástico ABS y componentes de goma",
     manufacturer: "SoundBox Audio Co.",
@@ -311,12 +341,14 @@ export const products: Product[] = [
     reviews: [
       {
         username: "LucaMusic",
-        comment: "Muy buen sonido por el precio, ideal para llevar a todas partes.",
+        comment:
+          "Muy buen sonido por el precio, ideal para llevar a todas partes.",
         rating: 5,
       },
       {
         username: "SofíaR",
-        comment: "Bastante potente, aunque me gustaría que fuera un poco más ligero.",
+        comment:
+          "Bastante potente, aunque me gustaría que fuera un poco más ligero.",
         rating: 4,
       },
     ],
@@ -329,10 +361,13 @@ export const products: Product[] = [
     price: 349.99,
     isActive: true,
     category: "Computación",
-    imageUrl: "https://www.kindpng.com/picc/m/539-5395942_acer-4k-hdr-monitor-2018-hd-png-download.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/539-5395942_acer-4k-hdr-monitor-2018-hd-png-download.png",
     createdAt: Date.now(),
-    description: "Monitor 4K de 27 pulgadas con colores nítidos y alta resolución.",
-    detailedDescription: "El Monitor 27'' 4K de ViewMax ofrece una experiencia visual impresionante con una resolución 4K ultraalta definición. Con su pantalla de 27 pulgadas, disfruta de colores vibrantes, detalles nítidos y una claridad visual sin igual, perfecta tanto para trabajar como para entretenimiento. Ideal para editores de video, diseñadores gráficos y jugadores, este monitor es compatible con tecnologías HDR, lo que garantiza un rango dinámico más amplio y una mejor representación de colores. Su diseño sin bordes y la frecuencia de actualización de 60Hz ofrecen una experiencia fluida y envolvente, mientras que la conectividad HDMI y DisplayPort asegura una integración fácil con diversos dispositivos. Además, cuenta con un soporte ergonómico ajustable que permite encontrar la postura más cómoda para largas horas de uso.",
+    description:
+      "Monitor 4K de 27 pulgadas con colores nítidos y alta resolución.",
+    detailedDescription:
+      "El Monitor 27'' 4K de ViewMax ofrece una experiencia visual impresionante con una resolución 4K ultraalta definición. Con su pantalla de 27 pulgadas, disfruta de colores vibrantes, detalles nítidos y una claridad visual sin igual, perfecta tanto para trabajar como para entretenimiento. Ideal para editores de video, diseñadores gráficos y jugadores, este monitor es compatible con tecnologías HDR, lo que garantiza un rango dinámico más amplio y una mejor representación de colores. Su diseño sin bordes y la frecuencia de actualización de 60Hz ofrecen una experiencia fluida y envolvente, mientras que la conectividad HDMI y DisplayPort asegura una integración fácil con diversos dispositivos. Además, cuenta con un soporte ergonómico ajustable que permite encontrar la postura más cómoda para largas horas de uso.",
     tags: ["computación", "4K", "monitor", "alta resolución"],
     material: "Plástico y vidrio templado",
     manufacturer: "ViewMax Technologies Inc.",
@@ -348,7 +383,8 @@ export const products: Product[] = [
       },
       {
         username: "GamerX",
-        comment: "Gran monitor para juegos, pero la frecuencia podría ser un poco más alta.",
+        comment:
+          "Gran monitor para juegos, pero la frecuencia podría ser un poco más alta.",
         rating: 4,
       },
     ],
@@ -361,10 +397,12 @@ export const products: Product[] = [
     price: 149.99,
     isActive: true,
     category: "Oficina",
-    imageUrl: "https://www.kindpng.com/picc/m/350-3509471_thumb-image-impresora-epson-tinta-continua-hd-png.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/350-3509471_thumb-image-impresora-epson-tinta-continua-hd-png.png",
     createdAt: Date.now(),
     description: "Impresora multifuncional con función de escaneo y copiado.",
-    detailedDescription: "La Impresora Multifuncional PrintPro es la herramienta ideal para oficinas o espacios de trabajo domésticos que necesitan un dispositivo todo en uno. Con funciones de impresión, escaneo y copiado, esta impresora ofrece versatilidad para satisfacer todas tus necesidades. Su tecnología de impresión de inyección de tinta proporciona documentos nítidos y de alta calidad, mientras que la opción de escaneo a color permite digitalizar tus documentos con gran precisión. Además, su función de copiado es rápida y eficiente, lo que hace que las tareas diarias sean más productivas. Con conectividad Wi-Fi y USB, puedes imprimir directamente desde tu dispositivo móvil o computadora sin complicaciones. Compacta y fácil de usar, es perfecta para quienes buscan una impresora confiable y económica sin perder calidad.",
+    detailedDescription:
+      "La Impresora Multifuncional PrintPro es la herramienta ideal para oficinas o espacios de trabajo domésticos que necesitan un dispositivo todo en uno. Con funciones de impresión, escaneo y copiado, esta impresora ofrece versatilidad para satisfacer todas tus necesidades. Su tecnología de impresión de inyección de tinta proporciona documentos nítidos y de alta calidad, mientras que la opción de escaneo a color permite digitalizar tus documentos con gran precisión. Además, su función de copiado es rápida y eficiente, lo que hace que las tareas diarias sean más productivas. Con conectividad Wi-Fi y USB, puedes imprimir directamente desde tu dispositivo móvil o computadora sin complicaciones. Compacta y fácil de usar, es perfecta para quienes buscan una impresora confiable y económica sin perder calidad.",
     tags: ["oficina", "impresora", "multifuncional", "escaneo", "copiado"],
     material: "Plástico de alta calidad y componentes electrónicos",
     manufacturer: "PrintPro Inc.",
@@ -375,12 +413,14 @@ export const products: Product[] = [
     reviews: [
       {
         username: "AnaOficina",
-        comment: "Perfecta para tareas de oficina, fácil de instalar y utilizar.",
+        comment:
+          "Perfecta para tareas de oficina, fácil de instalar y utilizar.",
         rating: 5,
       },
       {
         username: "CarlosP",
-        comment: "Buen rendimiento, aunque el escaneo a veces es un poco lento.",
+        comment:
+          "Buen rendimiento, aunque el escaneo a veces es un poco lento.",
         rating: 4,
       },
     ],
@@ -393,10 +433,13 @@ export const products: Product[] = [
     price: 79.99,
     isActive: true,
     category: "Almacenamiento",
-    imageUrl: "https://www.kindpng.com/picc/m/21-219940_hard-disc-png-disco-duro-1tb-toshiba-transparent.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/21-219940_hard-disc-png-disco-duro-1tb-toshiba-transparent.png",
     createdAt: Date.now(),
-    description: "Disco duro externo de 1TB para almacenamiento seguro y portátil.",
-    detailedDescription: "El Disco Duro Externo DataSafe de 1TB es la solución perfecta para quienes necesitan un almacenamiento seguro y portátil. Con capacidad de 1TB, ofrece un amplio espacio para guardar tus archivos, fotos, videos, y documentos sin preocuparte por quedarte sin espacio. Su diseño compacto y resistente lo hace ideal para transportarlo fácilmente en tu mochila o maletín, permitiéndote tener tus datos siempre a la mano. La tecnología de conexión USB 3.0 garantiza transferencias rápidas y seguras, mientras que su compatibilidad con múltiples sistemas operativos (Windows, macOS, Linux) asegura que puedas usarlo en cualquier entorno. Ideal tanto para uso personal como profesional, este disco duro ofrece la fiabilidad y rendimiento que necesitas para hacer copias de seguridad o trasladar grandes volúmenes de información con facilidad.",
+    description:
+      "Disco duro externo de 1TB para almacenamiento seguro y portátil.",
+    detailedDescription:
+      "El Disco Duro Externo DataSafe de 1TB es la solución perfecta para quienes necesitan un almacenamiento seguro y portátil. Con capacidad de 1TB, ofrece un amplio espacio para guardar tus archivos, fotos, videos, y documentos sin preocuparte por quedarte sin espacio. Su diseño compacto y resistente lo hace ideal para transportarlo fácilmente en tu mochila o maletín, permitiéndote tener tus datos siempre a la mano. La tecnología de conexión USB 3.0 garantiza transferencias rápidas y seguras, mientras que su compatibilidad con múltiples sistemas operativos (Windows, macOS, Linux) asegura que puedas usarlo en cualquier entorno. Ideal tanto para uso personal como profesional, este disco duro ofrece la fiabilidad y rendimiento que necesitas para hacer copias de seguridad o trasladar grandes volúmenes de información con facilidad.",
     tags: ["backup", "portable"],
     material: "Plástico resistente y metal",
     manufacturer: "DataSafe Technologies",
@@ -407,12 +450,14 @@ export const products: Product[] = [
     reviews: [
       {
         username: "JuanM",
-        comment: "Buen rendimiento y muy rápido para transferir archivos grandes.",
+        comment:
+          "Buen rendimiento y muy rápido para transferir archivos grandes.",
         rating: 5,
       },
       {
         username: "SaraT",
-        comment: "Cumple su función, pero me gustaría que fuera un poco más liviano.",
+        comment:
+          "Cumple su función, pero me gustaría que fuera un poco más liviano.",
         rating: 4,
       },
     ],
@@ -425,10 +470,12 @@ export const products: Product[] = [
     price: 129.99,
     isActive: true,
     category: "Redes",
-    imageUrl: "https://www.kindpng.com/picc/m/679-6795147_wifi-6-router-small-hd-png-download.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/679-6795147_wifi-6-router-small-hd-png-download.png",
     createdAt: Date.now(),
     description: "Router de última generación con cobertura amplia.",
-    detailedDescription: "El Router WiFi 6 de NetSpeed es la solución definitiva para aquellos que buscan una conexión rápida, estable y de largo alcance. Gracias a la tecnología WiFi 6 (802.11ax), este router ofrece velocidades de hasta 9.6 Gbps, lo que permite transmitir contenido en 4K, juegos en línea y videoconferencias sin interrupciones. Su capacidad de cobertura mejorada asegura que toda tu casa u oficina esté conectada de manera eficiente, incluso en áreas más alejadas del router. Además, la compatibilidad con múltiples dispositivos simultáneamente (gracias a la tecnología MU-MIMO) permite que todos los usuarios puedan navegar sin pérdida de velocidad. Con seguridad avanzada WPA3, podrás estar tranquilo sabiendo que tu red está protegida contra amenazas externas. Ideal para hogares y oficinas con múltiples dispositivos conectados, este router asegura una conexión rápida y segura para toda tu red.",
+    detailedDescription:
+      "El Router WiFi 6 de NetSpeed es la solución definitiva para aquellos que buscan una conexión rápida, estable y de largo alcance. Gracias a la tecnología WiFi 6 (802.11ax), este router ofrece velocidades de hasta 9.6 Gbps, lo que permite transmitir contenido en 4K, juegos en línea y videoconferencias sin interrupciones. Su capacidad de cobertura mejorada asegura que toda tu casa u oficina esté conectada de manera eficiente, incluso en áreas más alejadas del router. Además, la compatibilidad con múltiples dispositivos simultáneamente (gracias a la tecnología MU-MIMO) permite que todos los usuarios puedan navegar sin pérdida de velocidad. Con seguridad avanzada WPA3, podrás estar tranquilo sabiendo que tu red está protegida contra amenazas externas. Ideal para hogares y oficinas con múltiples dispositivos conectados, este router asegura una conexión rápida y segura para toda tu red.",
     tags: ["redes", "WiFi 6", "router", "alta velocidad"],
     material: "Plástico ABS y metal",
     manufacturer: "NetSpeed Networks",
@@ -444,7 +491,8 @@ export const products: Product[] = [
       },
       {
         username: "AnaG",
-        comment: "Muy buen router, aunque me gustaría que fuera un poco más compacto.",
+        comment:
+          "Muy buen router, aunque me gustaría que fuera un poco más compacto.",
         rating: 4,
       },
     ],
@@ -457,10 +505,12 @@ export const products: Product[] = [
     price: 249.99,
     isActive: true,
     category: "Muebles",
-    imageUrl: "https://www.kindpng.com/picc/m/630-6304059_four-slide-sillas-gamer-costa-rica-hd-png.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/630-6304059_four-slide-sillas-gamer-costa-rica-hd-png.png",
     createdAt: Date.now(),
     description: "Silla gamer ergonómica con soporte lumbar y reclinable.",
-    detailedDescription: "La Silla Gamer Ergonómica de ComfortSeat está diseñada para ofrecer la máxima comodidad durante largas sesiones de juego o trabajo. Con un soporte lumbar ajustable, puedes personalizar el respaldo para adaptarlo a tus necesidades y evitar dolores de espalda. Su sistema reclinable permite encontrar la posición ideal para descansar entre partidas o durante un descanso. Además, cuenta con reposabrazos ajustables y un cojín de cabeza ergonómico para mayor confort. La estructura de acero y el material de cuero sintético de alta calidad aseguran durabilidad y resistencia, mientras que las ruedas de alta movilidad permiten un desplazamiento fácil por tu espacio de juego o oficina.",
+    detailedDescription:
+      "La Silla Gamer Ergonómica de ComfortSeat está diseñada para ofrecer la máxima comodidad durante largas sesiones de juego o trabajo. Con un soporte lumbar ajustable, puedes personalizar el respaldo para adaptarlo a tus necesidades y evitar dolores de espalda. Su sistema reclinable permite encontrar la posición ideal para descansar entre partidas o durante un descanso. Además, cuenta con reposabrazos ajustables y un cojín de cabeza ergonómico para mayor confort. La estructura de acero y el material de cuero sintético de alta calidad aseguran durabilidad y resistencia, mientras que las ruedas de alta movilidad permiten un desplazamiento fácil por tu espacio de juego o oficina.",
     tags: ["gamer", "ergonómica", "silla", "comodidad", "ajustable"],
     material: "Cuero sintético, acero, espuma",
     manufacturer: "ComfortSeat",
@@ -471,15 +521,17 @@ export const products: Product[] = [
     reviews: [
       {
         username: "GamerProX",
-        comment: "Increíblemente cómoda, ideal para largas sesiones de juego. El soporte lumbar es perfecto.",
+        comment:
+          "Increíblemente cómoda, ideal para largas sesiones de juego. El soporte lumbar es perfecto.",
         rating: 5,
       },
       {
         username: "GamerProX",
-        comment: "Increíblemente cómoda, ideal para largas sesiones de juego. El soporte lumbar es perfecto.",
+        comment:
+          "Increíblemente cómoda, ideal para largas sesiones de juego. El soporte lumbar es perfecto.",
         rating: 5,
       },
-    ]
+    ],
   },
   {
     sku: "PRD014",
@@ -489,10 +541,13 @@ export const products: Product[] = [
     price: 39.99,
     isActive: true,
     category: "Computación",
-    imageUrl: "https://www.kindpng.com/picc/m/318-3182189_computer-keyboard-input-device-computer-component-space-hd.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/318-3182189_computer-keyboard-input-device-computer-component-space-hd.png",
     createdAt: Date.now(),
-    description: "Teclado inalámbrico cómodo y ligero, compatible con múltiples dispositivos.",
-    detailedDescription: "El Teclado Inalámbrico KeyLite es la solución ideal para quienes buscan comodidad y versatilidad. Su diseño compacto y ligero lo hace perfecto para llevarlo a cualquier lugar o para usarlo en espacios reducidos. Con una conexión inalámbrica estable, es compatible con una amplia variedad de dispositivos, desde computadoras y laptops hasta tablets y smartphones. Los botones de bajo perfil proporcionan una escritura silenciosa y cómoda, mientras que su batería de larga duración te garantiza días de uso continuo sin necesidad de recargarlo. Además, su diseño ergonómico reduce la tensión en las muñecas durante largas horas de uso, haciéndolo perfecto tanto para trabajo como para entretenimiento.",
+    description:
+      "Teclado inalámbrico cómodo y ligero, compatible con múltiples dispositivos.",
+    detailedDescription:
+      "El Teclado Inalámbrico KeyLite es la solución ideal para quienes buscan comodidad y versatilidad. Su diseño compacto y ligero lo hace perfecto para llevarlo a cualquier lugar o para usarlo en espacios reducidos. Con una conexión inalámbrica estable, es compatible con una amplia variedad de dispositivos, desde computadoras y laptops hasta tablets y smartphones. Los botones de bajo perfil proporcionan una escritura silenciosa y cómoda, mientras que su batería de larga duración te garantiza días de uso continuo sin necesidad de recargarlo. Además, su diseño ergonómico reduce la tensión en las muñecas durante largas horas de uso, haciéndolo perfecto tanto para trabajo como para entretenimiento.",
     tags: ["inalámbrico", "teclado", "computación", "portátil", "ligero"],
     material: "Plástico ABS",
     manufacturer: "KeyLite",
@@ -503,12 +558,14 @@ export const products: Product[] = [
     reviews: [
       {
         username: "TechMaster99",
-        comment: "Muy cómodo para escribir, la conexión inalámbrica es rápida y estable.",
+        comment:
+          "Muy cómodo para escribir, la conexión inalámbrica es rápida y estable.",
         rating: 5,
       },
       {
         username: "JuliusXP",
-        comment: "Es un buen teclado, pero la duración de la batería podría ser mejor.",
+        comment:
+          "Es un buen teclado, pero la duración de la batería podría ser mejor.",
         rating: 4,
       },
     ],
@@ -521,10 +578,13 @@ export const products: Product[] = [
     price: 699.99,
     isActive: true,
     category: "Telefonía",
-    imageUrl: "https://www.kindpng.com/picc/m/28-287230_samsung-galaxy-hd-png-download.png",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/28-287230_samsung-galaxy-hd-png-download.png",
     createdAt: Date.now(),
-    description: "Smartphone con pantalla AMOLED, cámara avanzada y alto rendimiento.",
-    detailedDescription: "El Smartphone X200 de PhoneTech es el dispositivo ideal para quienes buscan un teléfono de alto rendimiento, con características de última generación. Su pantalla AMOLED de 6.5 pulgadas ofrece colores vibrantes y negros profundos, lo que proporciona una experiencia visual inigualable. Equ ipad o con una cámara avanzada de 48 MP, captura fotos y videos de alta calidad, incluso en condiciones de poca luz. Además, su potente procesador y 6 GB de RAM permiten un rendimiento fluido y rápido, ya sea para jugar, navegar o trabajar en múltiples aplicaciones al mismo tiempo. Con su batería de 4000 mAh, tendrás todo el día de uso sin necesidad de recargar. El Smartphone X200 también incluye soporte para carga rápida y conectividad 5G para una navegación más rápida.",
+    description:
+      "Smartphone con pantalla AMOLED, cámara avanzada y alto rendimiento.",
+    detailedDescription:
+      "El Smartphone X200 de PhoneTech es el dispositivo ideal para quienes buscan un teléfono de alto rendimiento, con características de última generación. Su pantalla AMOLED de 6.5 pulgadas ofrece colores vibrantes y negros profundos, lo que proporciona una experiencia visual inigualable. Equ ipad o con una cámara avanzada de 48 MP, captura fotos y videos de alta calidad, incluso en condiciones de poca luz. Además, su potente procesador y 6 GB de RAM permiten un rendimiento fluido y rápido, ya sea para jugar, navegar o trabajar en múltiples aplicaciones al mismo tiempo. Con su batería de 4000 mAh, tendrás todo el día de uso sin necesidad de recargar. El Smartphone X200 también incluye soporte para carga rápida y conectividad 5G para una navegación más rápida.",
     tags: ["mobile", "android", "smartphone", "AMOLED", "5G"],
     material: "Vidrio, metal",
     manufacturer: "PhoneTech",
@@ -535,14 +595,556 @@ export const products: Product[] = [
     reviews: [
       {
         username: "TechLover24",
-        comment: "El rendimiento es excelente, la cámara toma fotos impresionantes y la pantalla AMOLED es increíble.",
+        comment:
+          "El rendimiento es excelente, la cámara toma fotos impresionantes y la pantalla AMOLED es increíble.",
         rating: 5,
       },
       {
         username: "GadgetGuru",
-        comment: "Buen teléfono, pero me gustaría que tuviera más capacidad de almacenamiento.",
+        comment:
+          "Buen teléfono, pero me gustaría que tuviera más capacidad de almacenamiento.",
         rating: 4,
       },
     ],
   },
-]
+  // --- 20 PRODUCTOS NUEVOS --- //
+
+  {
+    sku: "PRD016",
+    name: "Chaqueta Deportiva",
+    brand: "FitWear",
+    quantity: 60,
+    price: 59.99,
+    isActive: true,
+    category: "Ropa",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/22-225975_jacket-png-transparent-png.png",
+    createdAt: Date.now(),
+    description: "Chaqueta ligera ideal para entrenamiento.",
+    detailedDescription:
+      "La Chaqueta Deportiva FitWear está hecha con tela transpirable y resistente al viento, ideal para correr o entrenar en exteriores. Su diseño ergonómico permite libertad de movimiento, mientras que su interior suave ofrece comodidad durante todo el día.",
+    tags: ["ropa", "deporte"],
+    dimensions: { width: 45, height: 60, depth: 3 },
+    material: "Poliéster",
+    manufacturer: "FitWear Co.",
+    releaseDate: new Date("2025-10-04").getTime(),
+    color: "Azul",
+    rating: 4.4,
+    reviews: [
+      { username: "RunnerMax", comment: "Muy cómoda para correr.", rating: 5 },
+      {
+        username: "LauFit",
+        comment: "Buen material, pero talla un poco grande.",
+        rating: 4,
+      },
+    ],
+  },
+  {
+    sku: "PRD017",
+    name: "Botines de Cuero",
+    brand: "UrbanStep",
+    quantity: 25,
+    price: 89.99,
+    isActive: true,
+    category: "Calzado",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/223-2232658_boots-hd-png-download.png",
+    createdAt: Date.now(),
+    description: "Botines de cuero cómodos y resistentes.",
+    detailedDescription:
+      "Los Botines UrbanStep están fabricados con cuero genuino y suela reforzada para mayor durabilidad. Diseñados para un estilo casual urbano, combinan comodidad con resistencia para el día a día.",
+    tags: ["calzado", "cuero"],
+    dimensions: { width: 33, height: 12, depth: 22 },
+    material: "Cuero genuino",
+    manufacturer: "UrbanStep Shoes",
+    releaseDate: new Date("2025-09-12").getTime(),
+    color: "Marrón",
+    rating: 4.5,
+    reviews: [
+      { username: "PabloS", comment: "Muy cómodos para caminar.", rating: 5 },
+      { username: "NoraL", comment: "El color es hermoso.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD018",
+    name: "Teclado MIDI 49 Teclas",
+    brand: "SoundBeat",
+    quantity: 30,
+    price: 199.99,
+    isActive: true,
+    category: "Audio",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/451-4517683_midi-keyboard-png.png",
+    createdAt: Date.now(),
+    description: "Teclado MIDI profesional para producción musical.",
+    detailedDescription:
+      "Este teclado MIDI de 49 teclas sensibles a la presión es ideal para productores y músicos. Compatible con todos los DAW, incluye perillas asignables, pads y conectividad USB plug-and-play.",
+    tags: ["audio", "música", "MIDI"],
+    dimensions: { width: 80, height: 10, depth: 30 },
+    material: "Plástico ABS",
+    manufacturer: "SoundBeat Digital",
+    releaseDate: new Date("2025-10-18").getTime(),
+    color: "Negro",
+    rating: 4.6,
+    reviews: [
+      { username: "DJNano", comment: "Perfecto para producir.", rating: 5 },
+      {
+        username: "BeatMakerPro",
+        comment: "Gran sensibilidad en las teclas.",
+        rating: 4,
+      },
+    ],
+  },
+  {
+    sku: "PRD019",
+    name: "Drone Pro 4K",
+    brand: "SkyView",
+    quantity: 10,
+    price: 899.99,
+    isActive: true,
+    category: "Electrónica",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/129-1290627_drone-transparent-png.png",
+    createdAt: Date.now(),
+    description: "Drone profesional con cámara 4K.",
+    detailedDescription:
+      "El Drone Pro 4K de SkyView ofrece grabación en calidad ultra HD, estabilización de 3 ejes y control remoto con GPS. Ideal para fotografía aérea profesional y exploración.",
+    tags: ["drone", "4K", "electrónica"],
+    dimensions: { width: 35, height: 12, depth: 35 },
+    material: "Plástico reforzado y aluminio",
+    manufacturer: "SkyView Robotics",
+    releaseDate: new Date("2025-09-29").getTime(),
+    color: "Gris",
+    rating: 4.8,
+    reviews: [
+      {
+        username: "FlyerPro",
+        comment: "Increíble estabilidad y calidad.",
+        rating: 5,
+      },
+      { username: "AlanAir", comment: "Vale cada centavo.", rating: 5 },
+    ],
+  },
+  {
+    sku: "PRD020",
+    name: "SmartTV 55'' OLED",
+    brand: "VisionPlus",
+    quantity: 22,
+    price: 1299.99,
+    isActive: true,
+    category: "Electrónica",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/736-7366613_oled-tv-transparent-png.png",
+    createdAt: Date.now(),
+    description: "Televisor OLED de 55 pulgadas con HDR+.",
+    detailedDescription:
+      "El SmartTV OLED de VisionPlus ofrece negros profundos y colores vibrantes, con un sistema inteligente compatible con todas las apps modernas. Perfecta experiencia cinematográfica.",
+    tags: ["TV", "OLED", "HDR"],
+    dimensions: { width: 120, height: 70, depth: 5 },
+    material: "Vidrio y acero",
+    manufacturer: "VisionPlus Technologies",
+    releaseDate: new Date("2025-11-10").getTime(),
+    color: "Negro",
+    rating: 4.9,
+    reviews: [
+      {
+        username: "MovieFan",
+        comment: "La calidad de imagen es espectacular.",
+        rating: 5,
+      },
+      { username: "JaviTech", comment: "OLED vale la pena.", rating: 5 },
+    ],
+  },
+  {
+    sku: "PRD021",
+    name: "Cafetera Automática",
+    brand: "CoffeMax",
+    quantity: 18,
+    price: 249.99,
+    isActive: true,
+    category: "Hogar",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/271-2712194_coffee-machine-png.png",
+    createdAt: Date.now(),
+    description: "Cafetera automática con molinillo integrado.",
+    detailedDescription:
+      "La Cafetera Automática CoffeMax permite preparar café recién molido con un solo botón. Su sistema de presión ofrece un sabor intenso y aroma profesional.",
+    tags: ["café", "hogar", "electrodoméstico"],
+    dimensions: { width: 28, height: 40, depth: 32 },
+    material: "Plástico ABS y acero",
+    manufacturer: "CoffeMax Home",
+    releaseDate: new Date("2025-11-15").getTime(),
+    color: "Negro",
+    rating: 4.6,
+    reviews: [
+      {
+        username: "CoffeeLover",
+        comment: "El café sale delicioso.",
+        rating: 5,
+      },
+      { username: "BaristaHome", comment: "Muy fácil de usar.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD022",
+    name: "Escritorio de Madera",
+    brand: "WoodHome",
+    quantity: 14,
+    price: 179.99,
+    isActive: true,
+    category: "Muebles",
+    imageUrl: "https://www.kindpng.com/picc/m/72-720423_table-png.png",
+    createdAt: Date.now(),
+    description: "Escritorio de madera para oficina o estudio.",
+    detailedDescription:
+      "Fabricado con madera resistente, este escritorio ofrece un amplio espacio de trabajo y un diseño elegante para cualquier entorno de oficina o estudio.",
+    tags: ["muebles", "escritorio"],
+    dimensions: { width: 120, height: 75, depth: 60 },
+    material: "Madera natural",
+    manufacturer: "WoodHome Furniture",
+    releaseDate: new Date("2025-10-22").getTime(),
+    color: "Roble",
+    rating: 4.4,
+    reviews: [
+      { username: "HomeOffice", comment: "Muy resistente.", rating: 5 },
+      {
+        username: "LeoW",
+        comment: "Bonito, pero difícil de armar.",
+        rating: 4,
+      },
+    ],
+  },
+  {
+    sku: "PRD023",
+    name: "Auriculares Gaming 7.1",
+    brand: "GamerSound",
+    quantity: 50,
+    price: 69.99,
+    isActive: true,
+    category: "Audio",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/21-211794_headset-transparent-gaming.png",
+    createdAt: Date.now(),
+    description: "Auriculares gamer con sonido envolvente 7.1.",
+    detailedDescription:
+      "Diseñados para gamers, incluyen micrófono retráctil, sonido envolvente y almohadillas suaves para largas sesiones.",
+    tags: ["gaming", "audio"],
+    dimensions: { width: 20, height: 22, depth: 10 },
+    material: "Plástico ABS y espuma",
+    manufacturer: "GamerSound Co.",
+    releaseDate: new Date("2025-10-18").getTime(),
+    color: "Negro",
+    rating: 4.5,
+    reviews: [
+      { username: "ProGamer", comment: "Sonido brutal.", rating: 5 },
+      { username: "TwitchStar", comment: "Muy cómodos.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD024",
+    name: "Plancha a Vapor",
+    brand: "SteamPro",
+    quantity: 28,
+    price: 49.99,
+    isActive: true,
+    category: "Hogar",
+    imageUrl: "https://www.kindpng.com/picc/m/85-859381_iron-steam-png.png",
+    createdAt: Date.now(),
+    description: "Plancha a vapor con ajuste de temperatura.",
+    detailedDescription:
+      "La Plancha SteamPro elimina arrugas en segundos gracias a su potente vapor y suela libre de fricción. Ideal para todo tipo de telas.",
+    tags: ["hogar", "plancha"],
+    dimensions: { width: 15, height: 12, depth: 30 },
+    material: "Plástico y metal",
+    manufacturer: "SteamPro Home",
+    releaseDate: new Date("2025-11-05").getTime(),
+    color: "Blanco",
+    rating: 4.2,
+    reviews: [
+      { username: "HouseCare", comment: "Muy práctica.", rating: 5 },
+      { username: "RosaH", comment: "Calienta rápido.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD025",
+    name: "Cámara Deportiva 1080p",
+    brand: "ActionCam",
+    quantity: 35,
+    price: 119.99,
+    isActive: true,
+    category: "Fotografía",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/586-5868809_action-camera-png.png",
+    createdAt: Date.now(),
+    description: "Cámara compacta para deportes extremos.",
+    detailedDescription:
+      "Resistente al agua y golpes. Ideal para ciclismo, surf, senderismo y más. Incluye accesorios de montaje.",
+    tags: ["fotografía", "acción"],
+    dimensions: { width: 6, height: 4, depth: 3 },
+    material: "Plástico reforzado",
+    manufacturer: "ActionCam Pro",
+    releaseDate: new Date("2025-10-30").getTime(),
+    color: "Negro",
+    rating: 4.6,
+    reviews: [
+      { username: "SportMan", comment: "Muy resistente.", rating: 5 },
+      { username: "MeryGo", comment: "Buena calidad de video.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD026",
+    name: "Ventilador de Torre",
+    brand: "CoolBreeze",
+    quantity: 40,
+    price: 69.99,
+    isActive: true,
+    category: "Hogar",
+    imageUrl: "https://www.kindpng.com/picc/m/757-7571870_tower-fan-png.png",
+    createdAt: Date.now(),
+    description: "Ventilador silencioso con 3 velocidades.",
+    detailedDescription:
+      "El Ventilador CoolBreeze ofrece aire fresco con un funcionamiento silencioso ideal para dormitorios y oficinas. Diseño moderno y compacto.",
+    tags: ["hogar", "ventilación"],
+    dimensions: { width: 20, height: 95, depth: 20 },
+    material: "Plástico ABS",
+    manufacturer: "CoolBreeze Technology",
+    releaseDate: new Date("2025-05-20").getTime(),
+    color: "Blanco",
+    rating: 4.3,
+    reviews: [
+      { username: "FreshAir", comment: "Muy silencioso.", rating: 5 },
+      { username: "TomL", comment: "Cumple bien.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD027",
+    name: "Barra de Sonido 120W",
+    brand: "SoundMax",
+    quantity: 18,
+    price: 199.99,
+    isActive: true,
+    category: "Audio",
+    imageUrl: "https://www.kindpng.com/picc/m/421-4211188_soundbar-png.png",
+    createdAt: Date.now(),
+    description: "Barra de sonido potente con Bluetooth.",
+    detailedDescription:
+      "Mejora tu experiencia de cine en casa con esta barra de sonido 120W con subwoofer inalámbrico y modos de audio inteligentes.",
+    tags: ["audio", "soundbar"],
+    dimensions: { width: 90, height: 10, depth: 12 },
+    material: "Plástico y metal",
+    manufacturer: "SoundMax Audio",
+    releaseDate: new Date("2025-11-20").getTime(),
+    color: "Negro",
+    rating: 4.7,
+    reviews: [
+      { username: "MovieSound", comment: "Sonido espectacular.", rating: 5 },
+      { username: "EmiMusic", comment: "Muy potente.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD028",
+    name: "Sartén Antiadherente 28cm",
+    brand: "ChefCook",
+    quantity: 55,
+    price: 34.99,
+    isActive: true,
+    category: "Cocina",
+    imageUrl: "https://www.kindpng.com/picc/m/793-7934339_frying-pan-png.png",
+    createdAt: Date.now(),
+    description: "Sartén antiadherente con mango térmico.",
+    detailedDescription:
+      "Perfecta para cocinar sin aceite. Revestimiento de alta durabilidad libre de tóxicos.",
+    tags: ["cocina", "sartén"],
+    dimensions: { width: 28, height: 5, depth: 28 },
+    material: "Aluminio antiadherente",
+    manufacturer: "ChefCook Home",
+    releaseDate: new Date("2025-11-08").getTime(),
+    color: "Negro",
+    rating: 4.5,
+    reviews: [
+      { username: "CocinaPro", comment: "No se pega nada.", rating: 5 },
+      { username: "Vicente", comment: "Buen tamaño.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD029",
+    name: "Barra de Pesas Ajustable",
+    brand: "FitForce",
+    quantity: 20,
+    price: 149.99,
+    isActive: true,
+    category: "Deporte",
+    imageUrl: "https://www.kindpng.com/picc/m/6-69726_gym-weights-png.png",
+    createdAt: Date.now(),
+    description: "Barra con pesas regulables hasta 40 kg.",
+    detailedDescription:
+      "Ideal para entrenamientos en casa. Permite ajustar el peso de manera simple y segura según tu nivel de entrenamiento.",
+    tags: ["gimnasio", "pesas"],
+    dimensions: { width: 120, height: 10, depth: 10 },
+    material: "Acero y caucho",
+    manufacturer: "FitForce Sport",
+    releaseDate: new Date("2025-06-12").getTime(),
+    color: "Negro",
+    rating: 4.7,
+    reviews: [
+      { username: "GymHome", comment: "Muy resistente.", rating: 5 },
+      { username: "FabiFit", comment: "Perfecto para rutinas.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD030",
+    name: "Lámpara LED Escritorio",
+    brand: "BrightLite",
+    quantity: 70,
+    price: 24.99,
+    isActive: true,
+    category: "Iluminación",
+    imageUrl: "https://www.kindpng.com/picc/m/447-4479255_led-lamp-png.png",
+    createdAt: Date.now(),
+    description: "Lámpara LED con brillo regulable.",
+    detailedDescription:
+      "Incluye 3 modos de luz y brazo articulado. Ideal para estudio, oficina o lectura nocturna.",
+    tags: ["iluminación", "LED"],
+    dimensions: { width: 15, height: 45, depth: 10 },
+    material: "Plástico ABS",
+    manufacturer: "BrightLite Co.",
+    releaseDate: new Date("2025-11-11").getTime(),
+    color: "Blanco",
+    rating: 4.4,
+    reviews: [
+      { username: "Reader88", comment: "Muy útil.", rating: 5 },
+      { username: "OfficePro", comment: "Buen brillo.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD031",
+    name: "Cepillo Dental Eléctrico",
+    brand: "SmilePro",
+    quantity: 50,
+    price: 39.99,
+    isActive: true,
+    category: "Salud",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/33-330784_electric-toothbrush-png.png",
+    createdAt: Date.now(),
+    description: "Cepillo eléctrico con 3 modos de limpieza.",
+    detailedDescription:
+      "Incluye temporizador inteligente y cabezales reemplazables. Recomendado por dentistas.",
+    tags: ["salud", "higiene"],
+    dimensions: { width: 3, height: 20, depth: 3 },
+    material: "Plástico",
+    manufacturer: "SmilePro Health",
+    releaseDate: new Date("2025-10-28").getTime(),
+    color: "Blanco",
+    rating: 4.5,
+    reviews: [
+      {
+        username: "DentalCare",
+        comment: "Deja los dientes muy limpios.",
+        rating: 5,
+      },
+      { username: "Meli", comment: "Buen cepillo.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD032",
+    name: "Bicicleta Urbana",
+    brand: "CityBike",
+    quantity: 8,
+    price: 499.99,
+    isActive: true,
+    category: "Transporte",
+    imageUrl: "https://www.kindpng.com/picc/m/53-535091_bicycle-png.png",
+    createdAt: Date.now(),
+    description: "Bicicleta urbana ligera y resistente.",
+    detailedDescription:
+      "Perfecta para recorridos diarios. Marco de aluminio, cambios suaves y asiento ergonómico.",
+    tags: ["transporte", "bicicleta"],
+    dimensions: { width: 170, height: 100, depth: 20 },
+    material: "Aluminio",
+    manufacturer: "CityBike Co.",
+    releaseDate: new Date("2025-04-10").getTime(),
+    color: "Gris",
+    rating: 4.8,
+    reviews: [
+      { username: "UrbanRide", comment: "Muy cómoda.", rating: 5 },
+      { username: "NickB", comment: "Excelente calidad.", rating: 5 },
+    ],
+  },
+  {
+    sku: "PRD033",
+    name: "Aspiradora Inalámbrica",
+    brand: "CleanMax",
+    quantity: 33,
+    price: 149.99,
+    isActive: true,
+    category: "Hogar",
+    imageUrl:
+      "https://www.kindpng.com/picc/m/127-1276423_vacuum-cleaner-png.png",
+    createdAt: Date.now(),
+    description: "Aspiradora ligera con batería de larga duración.",
+    detailedDescription:
+      "Perfecta para limpieza del hogar sin cables. Potente succión y filtros HEPA.",
+    tags: ["hogar", "aspiradora"],
+    dimensions: { width: 25, height: 110, depth: 20 },
+    material: "Plástico y metal",
+    manufacturer: "CleanMax Corp.",
+    releaseDate: new Date("2025-11-03").getTime(),
+    color: "Morado",
+    rating: 4.5,
+    reviews: [
+      { username: "CleanHome", comment: "Muy práctica.", rating: 5 },
+      { username: "Julia", comment: "Buena batería.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD034",
+    name: "Carrito para Bebé",
+    brand: "BabyGo",
+    quantity: 12,
+    price: 299.99,
+    isActive: true,
+    category: "Bebés",
+    imageUrl: "https://www.kindpng.com/picc/m/120-1203524_stroller-png.png",
+    createdAt: Date.now(),
+    description: "Carrito plegable y seguro para bebés.",
+    detailedDescription:
+      "Incluye arnés de seguridad, ruedas amortiguadas y plegado rápido. Ideal para salir a pasear.",
+    tags: ["bebés", "carrito"],
+    dimensions: { width: 50, height: 110, depth: 80 },
+    material: "Aluminio y tela",
+    manufacturer: "BabyGo Kids",
+    releaseDate: new Date("2025-10-19").getTime(),
+    color: "Azul Marino",
+    rating: 4.6,
+    reviews: [
+      { username: "Mama123", comment: "Muy seguro.", rating: 5 },
+      { username: "PapiTech", comment: "Fácil de plegar.", rating: 4 },
+    ],
+  },
+  {
+    sku: "PRD035",
+    name: "Microondas Digital 20L",
+    brand: "HomeHeat",
+    quantity: 26,
+    price: 99.99,
+    isActive: true,
+    category: "Cocina",
+    imageUrl: "https://www.kindpng.com/picc/m/772-7725727_microwave-png.png",
+    createdAt: Date.now(),
+    description: "Microondas con funciones automáticas.",
+    detailedDescription:
+      "Incluye descongelado inteligente, pantalla LED y temporizador de precisión.",
+    tags: ["cocina", "microondas"],
+    dimensions: { width: 45, height: 25, depth: 35 },
+    material: "Acero y plástico",
+    manufacturer: "HomeHeat Electronics",
+    releaseDate: new Date("2025-11-14").getTime(),
+    color: "Plateado",
+    rating: 4.4,
+    reviews: [
+      { username: "ChefHome", comment: "Muy útil y rápido.", rating: 5 },
+      { username: "Cami", comment: "Bonito diseño.", rating: 4 },
+    ],
+  },
+];

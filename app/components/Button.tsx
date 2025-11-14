@@ -23,7 +23,7 @@ export default function Button({ text, variant = "primary", size = "md" }: Props
   };
 
   return (
-    <button className={`${sizeClasses[size]} ${variantClasses[variant]} rounded`}>
+    <button className={`${sizeClasses[size]} ${variantClasses[variant]} rounded cursor-pointer `}>
       {text}
     </button>
   );

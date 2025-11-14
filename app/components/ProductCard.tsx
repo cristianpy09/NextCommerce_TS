@@ -21,13 +21,13 @@ export default function ProductCard(props: Prop) {
   const idURL = params.id;
 
   return (
-    <article className="flex flex-col justify-between bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md">
+    <article className="flex flex-col justify-between bg-[#E1DCD9] border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md">
       {/* Imagen del producto */}
       <div className="relative w-full h-52 overflow-hidden">
         <img
           src={img}
           alt={name}
-          className="object-cover w-full h-full"
+          className=" w-full h-full "
         />
       </div>
 
@@ -51,10 +51,8 @@ export default function ProductCard(props: Prop) {
       </div>
 
       {/* Pie con acciones */}
-      <div className="flex items-center justify-between px-4 py-3 border-t border-gray-100 bg-gray-50 text-sm text-gray-600">
-        <span className="uppercase tracking-wider text-xs text-gray-400">
-          SKU: {sku}
-        </span>
+      <div className="flex items-center justify-between px-4 py-3 border-t border-gray-100 bg-[#8F8681] text-sm text-gray-600">
+        
         <Link href={`/${sku}`}>
        <Button text="ver detalles" size={"md"} variant={"primary"}/>
             
