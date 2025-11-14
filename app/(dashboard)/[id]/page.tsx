@@ -2,10 +2,11 @@ import DetailsCard from '@/app/components/DetailsCard';
 import Notfound from '@/app/components/notfound';
 import ProductCard from '@/app/components/ProductCard';
 import ProductCardView from '@/app/components/ProductCardView';
+
 import { products } from '@/app/data/products';
 import { Product } from '@/app/types/productsType';
 import { notFound, redirect } from 'next/navigation';
-import React from 'react'
+
 
 interface Props {
   params: {
@@ -17,9 +18,7 @@ export default async function ProductDetailpage({ params }: Props) {
   const data = products
   const { id } = await params
   const producto = data.find((p) => p.sku === id);
- 
-
-
+  
 
   if (producto) {
     return (

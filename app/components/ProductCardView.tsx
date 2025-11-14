@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+
 
 type Props = {
   name: string;
@@ -66,6 +67,10 @@ export default function ProductCardView({
     });
   }
 
+
+ 
+
+  
   return (
     <article className={`flex flex-col bg-[#E1DCD9] rounded-xl shadow-sm overflow-hidden hover:shadow-md ${isDetail ? "max-w-5xl mx-auto" : ""}`}>
       {isDetail ? (
@@ -232,7 +237,7 @@ export default function ProductCardView({
                 />
               </label>
               <button
-                onClick={() => onAddToCartAction?.(qty)}
+              
                 className="flex-1 px-6 py-3 rounded-lg bg-green-600 text-white font-bold text-lg hover:bg-green-700 transition shadow-md"
               >
                 🛒 Añadir al carrito

@@ -1,8 +1,12 @@
 "use client";
 
-import React from 'react';
+
+import React, { useContext } from 'react';
 
 export default function CartPage() {
+
+
+
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-8">🛍️ Carrito</h1>
@@ -15,7 +19,7 @@ export default function CartPage() {
             className="w-28 h-28 object-cover rounded-md"
           />
           <div className="ml-6">
-            <h2 className="text-xl font-semibold">Zapato doble hebilla</h2>
+            <h2 className="text-xl font-semibold">{}</h2>
             <p className="text-sm text-gray-600 mt-2">Talla: Única</p>
             <p className="text-sm text-gray-600">Cantidad: 5</p>
             <button className="text-blue-600 text-sm mt-2 hover:underline">Mover a wishlist</button>
