@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import ProductCardView from "./ProductCardView";
+import { Product } from "../types/productsType";
 
 type Prop = {
+  producto:Product
   name: string;
   img?: string;
   description?: string;
@@ -35,7 +37,7 @@ export default function DetailsCard(props: Prop) {
   // DetailsCard: vista cuando el usuario hace "Ver Detalles"
   // Si no se provee `onAddToCartAction`, usamos una implementación local sencilla
   const { onAddToCartAction } = props;
-
+  const {producto} = props 
   const addToCart = (qty?: number) => {
     if (onAddToCartAction) return onAddToCartAction(qty);
 
@@ -60,7 +62,7 @@ export default function DetailsCard(props: Prop) {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
-      <ProductCardView {...props} mode="detail" onAddToCartAction={addToCart} />
+      <ProductCardView product={producto}  {...props} mode="detail" onAddToCartAction={addToCart} />
     </div>
   );
 }

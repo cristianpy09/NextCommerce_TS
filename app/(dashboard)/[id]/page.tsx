@@ -24,6 +24,7 @@ export default async function ProductDetailpage({ params }: Props) {
     return (
       <div>
         <DetailsCard
+          producto={producto}
           name={producto.name}
           category={producto.category}
           description={producto.description}

@@ -1,9 +1,12 @@
 "use client";
 import Link from "next/link";
 import React, { useContext, useState } from "react";
+import { CartContext } from "../context/CartContext";
+import { Product } from "../types/productsType";
 
 
 type Props = {
+  product:Product
   name: string;
   img?: string;
   description?: string;
@@ -50,11 +53,12 @@ export default function ProductCardView({
   rating,
   reviews,
   tags,
+  product
 }: Props) {
   const isDetail = mode === "detail";
   const [qty, setQty] = useState<number>(1);
   const [mainImg, setMainImg] = useState<string | undefined>(img);
-
+  
   // Estadísticas de reseñas (uso en la vista detalle)
   const totalReviews = reviews?.length ?? 0;
   const computedAvg = totalReviews ? reviews!.reduce((s, r) => s + (r.rating || 0), 0) / totalReviews : undefined;
@@ -66,8 +70,19 @@ export default function ProductCardView({
       ratingCounts[idx]++;
     });
   }
+ 
+  const cart = useContext(CartContext);
 
+    
+      const handleAdd = () => {
+        cart?.addProduct(product);
+        console.log("añadido");
+        
+      };
+    
+   
 
+    
  
 
   
@@ -237,8 +252,9 @@ export default function ProductCardView({
                 />
               </label>
               <button
-              
-                className="flex-1 px-6 py-3 rounded-lg bg-green-600 text-white font-bold text-lg hover:bg-green-700 transition shadow-md"
+                onClick={handleAdd
+                }
+                className="flex-1 px-6 py-3 rounded-lg bg-green-500 text-white font-bold text-lg hover:bg-green-700 transition shadow-md"
               >
                 🛒 Añadir al carrito
               </button>
