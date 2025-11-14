@@ -23,7 +23,7 @@ export default function DashboardLayout({
               Open
             </label>
           </div>
-          <div className="drawer-side mt-16 bg-amber-100 ">
+          <div className="drawer-side mt-16 bg-[#E1DCD9]">
             <label
               htmlFor="my-drawer-3"
               aria-label="close sidebar"
