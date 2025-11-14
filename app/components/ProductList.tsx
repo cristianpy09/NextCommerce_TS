@@ -7,7 +7,7 @@ export default function ProductList() {
   const data = products;
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white w-screen p-5 ">
+    <div className="flex justify-center items-center min-h-screen bg-gray-50 w-screen p-5 ">
       <section
         className="w-full max-w-375
         grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 

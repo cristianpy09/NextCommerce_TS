@@ -67,7 +67,7 @@ export default function ProductCardView({
   }
 
   return (
-    <article className={`flex flex-col bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md ${isDetail ? "max-w-5xl mx-auto" : ""}`}>
+    <article className={`flex flex-col bg-[#E1DCD9] rounded-xl shadow-sm overflow-hidden hover:shadow-md ${isDetail ? "max-w-5xl mx-auto" : ""}`}>
       {isDetail ? (
         // LAYOUT DETALLE: Grid con imagen a la izquierda
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
@@ -91,7 +91,7 @@ export default function ProductCardView({
             </div>
             {/* Panel de reseñas (debajo de las miniaturas) */}
             <div className="mt-6">
-              <div className="bg-white rounded-lg p-4 border border-gray-200">
+              <div className="bg-[#8F8681] rounded-lg p-4 border border-gray-200">
                 <div className="flex items-start gap-4">
                   <div className="text-center pr-4 border-r border-gray-100">
                     <div className="text-3xl font-bold text-blue-600">{avgRating ?? "—"}</div>
@@ -118,7 +118,7 @@ export default function ProductCardView({
                 {reviews && reviews.length > 0 && (
                   <div className="mt-4 space-y-3">
                     {reviews.slice(0, 3).map((r, i) => (
-                      <div key={i} className="p-3 bg-gray-50 rounded">
+                      <div key={i} className="p-3 bg-[#E1DCD9] rounded">
                         <div className="flex items-center justify-between">
                           <div className="font-medium text-sm text-gray-800">{r.username}</div>
                           <div className="text-yellow-500 text-sm">{"★".repeat(Math.max(0, Math.min(5, r.rating || 0)))}</div>
@@ -163,7 +163,7 @@ export default function ProductCardView({
             </p>
 
             {/* Detalles técnicos en una cuadrícula */}
-            <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-gray-50 rounded-lg">
+            <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-[#8F8681] rounded-lg">
               {color && (
                 <div>
                   <p className="text-sm text-gray-600 font-semibold">Color</p>
