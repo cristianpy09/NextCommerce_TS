@@ -7,7 +7,7 @@ interface Props {
 }
 
 type SizeOptions = "sm" | "md" | "lg";
-type VariantColor = "primary" | "secondary" | "danger";
+type VariantColor = "primary" | "secondary" | "danger" | "modern";
 
 export default function Button({ text, variant = "primary", size = "md" }: Props) {
   const sizeClasses = {
@@ -20,6 +20,7 @@ export default function Button({ text, variant = "primary", size = "md" }: Props
     primary: "bg-blue-400 text-white hover:bg-blue-500",
     secondary: "bg-yellow-400 text-black hover:bg-yellow-500",
     danger: "bg-red-400 text-white hover:bg-red-500",
+    modern:"bg-[#32435F] text-white hover:bg-[#32435F] "
   };
 
   return (

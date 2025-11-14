@@ -54,7 +54,7 @@ export default function ProductCard(props: Prop) {
       <div className="flex items-center justify-between px-4 py-3 border-t border-gray-100 bg-[#8F8681] text-sm text-gray-600">
         
         <Link href={`/${sku}`}>
-       <Button text="ver detalles" size={"md"} variant={"primary"}/>
+       <Button text="ver detalles" size={"md"} variant={"modern"}/>
             
           
         </Link>
