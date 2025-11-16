@@ -3,56 +3,81 @@ import React from "react";
 export default function () {
   return (
     
-      <form>
-        <input
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Svelte"
-        />
-        <input
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Vue"
-        />
+      <form className="" >
+       
         <input 
           className="btn"
           type="checkbox"
           name="frameworks"
-          aria-label="React"
+          aria-label="Electrónica"
         />
          <input 
           className="btn"
           type="checkbox"
           name="frameworks"
-          aria-label="React"
+          aria-label="Audio"
         />
          <input 
           className="btn"
           type="checkbox"
           name="frameworks"
-          aria-label="React"
+          aria-label="Ropa"
         />
          <input 
           className="btn"
           type="checkbox"
           name="frameworks"
-          aria-label="React"
+          aria-label="Calzado"
         />
          <input 
           className="btn"
           type="checkbox"
           name="frameworks"
-          aria-label="React"
+          aria-label="Hogar"
         />
          <input 
           className="btn"
           type="checkbox"
           name="frameworks"
-          aria-label="React"
+          aria-label="Muebles"
         />
-        
+         <input 
+          className="btn"
+          type="checkbox"
+          name="frameworks"
+          aria-label="Fotografía"
+        />
+         <input 
+          className="btn"
+          type="checkbox"
+          name="frameworks"
+          aria-label="Cocina"
+        />
+         <input 
+          className="btn"
+          type="checkbox"
+          name="frameworks"
+          aria-label="Deporte"
+        />
+         <input 
+          className="btn"
+          type="checkbox"
+          name="frameworks"
+          aria-label="Iluminación"
+        />
+         <input 
+          className="btn"
+          type="checkbox"
+          name="frameworks"
+          aria-label="Salud"
+        />
+         <input 
+          className="btn"
+          type="checkbox"
+          name="frameworks"
+          aria-label="Transporte"
+        />
+
         <input className="btn btn-square" type="reset" value="×" />
       </form>
     

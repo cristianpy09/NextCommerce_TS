@@ -11,7 +11,7 @@ export default function DashboardLayout({
   return (
     <div>
       <Header />
-      <aside className="bg-yellow-300">
+      <aside>
         <div className="drawer lg:drawer-open ">
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center ">
@@ -23,7 +23,7 @@ export default function DashboardLayout({
               Open
             </label>
           </div>
-          <div className="drawer-side mt-16 bg-amber-100 ">
+          <div className="drawer-side mt-16 bg-[#E1DCD9]">
             <label
               htmlFor="my-drawer-3"
               aria-label="close sidebar"
@@ -89,7 +89,7 @@ export default function DashboardLayout({
                 </details>
               </li>
               <li>
-                <a>Computers</a>
+                <a>others</a>
               </li>
               <li>
                 <details open>

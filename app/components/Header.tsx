@@ -7,20 +7,20 @@ export default function Header() {
  
   return (
     <header>
-      <div className="navbar fixed top-0 left-0 w-full z-50 bg-blue-100 shadow-sm  ">
+      <div className="navbar fixed left-0 w-full z-50 bg-[#E1DCD9] shadow-sm  ">
         <div className="flex-1">
-          <Link className="btn btn-ghost text-xl" href="/dashboard">
+          <Link className="btn btn-ghost text-xl" href="/">
             Ecomerce-Lite
           </Link>
         </div>
         <div className="flex">
           <SearchBar />
           <Link href="/cart">
-            <div className="dropdown dropdown-end">
+            <div className="dropdown dropdown-end ">
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost btn-circle"
+                className="btn btn-ghost btn-circle "
               >
                 <div className="indicator">
                   <svg
