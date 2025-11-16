@@ -16,10 +16,10 @@ export default function CartProvider({ children }: props) {
 
   const deleteProduct = (id: string) => {
     const indice = products.findIndex((product) => product.sku === id);
-
-    // 2. Si el objeto se encuentra (el índice no es -1), eliminarlo
+   
     if (indice !== -1) {
-      products.splice(indice, 1); // Elimina 1 elemento desde la posición 'indice'
+      const newProduct= products.toSpliced(indice)
+      setProducts(newProduct)
     }
   };
   return (
