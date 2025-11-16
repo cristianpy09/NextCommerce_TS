@@ -1,7 +1,5 @@
-
 import ProductCard from "@/app/components/ProductCard";
 import { products } from "@/app/data/products";
-import React from "react";
 
 interface Props {
   params: {
