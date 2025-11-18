@@ -3,11 +3,13 @@ import { products } from "../data/products";
 import { Product } from "../types/productsType";
 import ProductCard from "./ProductCard";
 
+
 export default function ProductList() {
   const data = products;
 
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center py-10 px-5">
+      
       <section
         className="
     w-full max-w-7xl
@@ -27,6 +29,7 @@ export default function ProductList() {
           />
         ))}
       </section>
+      
     </div>
   );
 }
