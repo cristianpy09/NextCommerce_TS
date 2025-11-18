@@ -3,14 +3,29 @@
 import Button from "@/app/components/Button";
 import { CartContext } from "@/app/context/CartContext";
 import { useContext } from "react";
+import Swal from "sweetalert2";
+
+
+
 
 export default function CartPage() {
   const cart = useContext(CartContext);
-
   const handleDelete = (id: string) => {
-    cart?.deleteProduct(id);
+    Swal.fire({
+      title: "¿Quieres eliminar este producto?",
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Eliminar",
+      denyButtonText: "No eliminar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        cart?.deleteProduct(id);
+        Swal.fire("¡Producto eliminado!", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("El producto no fue eliminado", "", "info");
+      }
+    });
   };
-
   if (!cart || cart.products.length === 0) {
     return (
       <div className="text-center mt-20">
