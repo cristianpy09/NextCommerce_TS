@@ -4,6 +4,7 @@ import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { Product } from "../types/productsType";
 import Button from "./Button";
+import Badge from "./Badge";
 
 
 type Props = {
@@ -216,7 +217,7 @@ export default function ProductCardView({
           <p className="text-gray-700 mt-6 leading-relaxed">
             {detailedDescription}
           </p>
-  
+          
           {/* Datos técnicos */}
           <div className="grid grid-cols-2 gap-4 mt-8 p-4 bg-gray-50 border border-gray-200 rounded-xl">
             {color && (
@@ -261,6 +262,7 @@ export default function ProductCardView({
               <span className="ml-2 bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
                 {category}
               </span>
+              
             </div>
           </div>
   
