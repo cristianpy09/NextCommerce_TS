@@ -12,15 +12,19 @@ export default function CartProvider({ children }: props) {
   const [products, setProducts] = useState<Product[]>([]);
   const addProduct = (product: Product) => {
     setProducts((prev) => [...prev, product]);
+    const arrayComoString = JSON.stringify(product);
+    localStorage.setItem("producto",arrayComoString)
   };
 
   const deleteProduct = (id: string) => {
     const indice = products.findIndex((product) => product.sku === id);
-   
+
     if (indice !== -1) {
-      const newProduct= products.toSpliced(indice)
+      const newProduct= products.toSpliced(indice,1)
       setProducts(newProduct)
     }
+    console.log(`producto con indice ${indice}`);
+    
   };
   return (
     <CartContext.Provider

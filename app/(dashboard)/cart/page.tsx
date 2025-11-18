@@ -21,7 +21,7 @@ export default function CartPage() {
     <h1 className="text-3xl font-bold mb-8">🛍️ Carrito</h1>
 
     {cart.products.map(product => (
-      <div key={product.sku} className="flex flex-col md:flex-row items-start md:items-center justify-between border rounded-lg p-6 shadow-sm mb-8">
+      <div key={product.name} className="flex flex-col md:flex-row items-start md:items-center justify-between border rounded-lg p-6 shadow-sm mb-8">
         <div className="flex items-center">
           <img
             src={product.imageUrl}

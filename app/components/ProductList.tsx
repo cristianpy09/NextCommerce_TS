@@ -7,11 +7,13 @@ export default function ProductList() {
   const data = products;
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50 w-screen p-5 ">
+    <div className="min-h-screen bg-gray-50 flex justify-center py-10 px-5">
       <section
-        className="w-full max-w-375
-        grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 
-        gap-5 justify-items-center"
+        className="
+    w-full max-w-6xl
+    grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5
+    gap-6
+  "
       >
         {data.map((u: Product) => (
           <ProductCard
