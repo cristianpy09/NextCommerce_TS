@@ -1,21 +1,19 @@
-"use client"
+"use client";
 
 import { useContext } from "react";
 import SearchBar from "./SearchBar";
 import Link from "next/link";
 import { CartContext } from "../context/CartContext";
-
+import { redirect } from "next/navigation";
 
 export default function Header() {
   const cart = useContext(CartContext);
-  
+
   const count = cart ? cart.products.length : 0;
-  
- 
+
   return (
     <header className="w-full fixed left-0 top-0 z-50 bg-yellow-200 border-b border-gray-200 shadow-sm">
       <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        
         {/* Branding */}
         <Link href="/" className="text-2xl font-bold text-gray-800">
           Ecommerce<span className="text-blue-600">Lite</span>
@@ -28,7 +26,6 @@ export default function Header() {
 
         {/* Right section */}
         <div className="flex items-center gap-4">
-
           {/* Cart */}
           <Link href="/cart">
             <button
@@ -69,23 +66,28 @@ export default function Header() {
           </Link>
 
           {/* User Avatar */}
+
           <div className="relative group">
-            <button
-              className="
-                w-10 h-10 rounded-full overflow-hidden border border-gray-300 
-                
-              "
-            >
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                alt="User avatar"
-                className="w-full h-full object-cover"
-              />
-            </button>
-
-           
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
+                </div>
+              </div>
+              <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                <li>
+                  <button onClick={() => redirect("/login")}>Logout</button>
+                </li>
+              </ul>
+            </div>
           </div>
-
         </div>
       </nav>
     </header>
