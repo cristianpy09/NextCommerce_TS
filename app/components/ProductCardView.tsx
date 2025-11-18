@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { Product } from "../types/productsType";
+import Button from "./Button";
 
 
 type Props = {
@@ -251,13 +252,12 @@ export default function ProductCardView({
                   className="w-20 p-2 border border-gray-300 rounded-lg text-center font-semibold"
                 />
               </label>
-              <button
-                onClick={handleAdd
-                }
-                className="flex-1 px-6 py-3 rounded-lg bg-green-500 text-white font-bold text-lg hover:bg-green-700 transition shadow-md"
+              <Button text="Añadir al carrito" size="lg" variant="modern" 
+               onClick={handleAdd}
+               
               >
-                🛒 Añadir al carrito
-              </button>
+                
+              </Button>
             </div>
           </div>
         </div>

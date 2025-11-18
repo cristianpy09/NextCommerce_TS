@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/app/components/Button";
 import { CartContext } from "@/app/context/CartContext";
 import { useContext } from "react";
 
@@ -31,12 +32,12 @@ export default function CartPage() {
             <h2 className="text-xl font-semibold">{product.name}</h2>
             <p className="text-sm text-gray-600 mt-2">Categoría: {product.category}</p>
             <p className="text-sm text-gray-600">Cantidad: 1</p>
-            <button
-              className="text-red-500 text-sm mt-2 hover:underline"
+            <Button text="Eliminar" size="sm" variant="danger" 
+              
               onClick={()=>handleDelete(product.sku)}
             >
-              Eliminar
-            </button>
+             
+            </Button>
           </div>
         </div>
 
@@ -55,9 +56,9 @@ export default function CartPage() {
         </div>
       </div>
 
-      <button className="mt-6 w-full md:w-auto bg-black text-white px-6 py-3 rounded hover:bg-gray-900">
-        Proceder al pago
-      </button>
+      <Button text="Proceder al pago" size="md" variant="modern" >
+       
+      </Button>
     </div>
   </div>
   );
