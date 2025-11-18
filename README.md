@@ -1,112 +1,116 @@
-# FLUJO DE TRABAJO EN EQUIPO — NextCommerce_TS
+# README.md
 
-Este documento describe el flujo de trabajo recomendado para colaborar correctamente en este proyecto.  
-Sigue los pasos en orden para evitar conflictos y mantener un repositorio limpio y organizado.
+## Proyecto: eCommerce Lite
+
+Este proyecto es una aplicación de e-commerce desarrollada con Next.js y TypeScript. Su objetivo principal es proporcionar una estructura modular para la gestión de productos y usuarios, implementando una interfaz de usuario reutilizable.
 
 ---
 
-##  1. Clonar el repositorio (solo la primera vez)
+## Contenido
 
-Cada integrante lo hace **una sola vez**:
+1. [Características](#características)
+2. [Estructura del Proyecto](#estructura-del-proyecto)
+3. [Instrucciones de Uso](#instrucciones-de-uso)
+   - [Configuración Inicial](#configuración-inicial)
+   - [Uso del Store con Decoradores](#uso-del-store-con-decoradores)
+4. [Requisitos](#requisitos)
+5. [Contribución](#contribución)
 
-```bash
-git clone https://github.com/cristianpy09/NextCommerce_TS.git
-cd <NOMBRE_DEL_PROYECTO>
-```
-##  2. Cambiar a la rama develop
+---
 
-Antes de empezar a trabajar:
-```bash
-git checkout develop
-```
-##  3. Actualizar develop
+## Características
 
-Siempre trae los cambios más recientes antes de trabajar:
-```bash
-git pull origin develop
-```
-##  4. Crear una rama feature
+- Interfaces definidas para productos y usuarios que refuerzan un tipado estricto.
+- Módulo de autenticación y gestión de usuarios con funcionalidades completas (CRUD).
+- Componentes reutilizables: Button, Badge, y Card, con propiedades tipadas en TypeScript.
 
-Cada integrante trabaja su parte del código en una rama propia basada en develop.
+---
 
-Ejemplo: estás desarrollando la página de login:
-```bash
-git checkout -b feature/login-page
-```
+## Estructura del Proyecto
 
-Esto crea una nueva rama basada en develop llamada feature/login-page.
-
-##  5. Trabajar en tu rama
-
-Edita, crea o elimina archivos sin miedo.
-Haz commits con mensajes claros y con prefijos:
-```bash
-git add .
-git commit -m "feat: agrega formulario de login con validación"
-```
-
-## Usa siempre prefijos de commit:
-
-| Prefijo     | Descripción                                  |
-| ----------- | -------------------------------------------- |
-| `feat:`     | Nueva funcionalidad                          |
-| `fix:`      | Corrección de errores                        |
-| `refactor:` | Mejora interna sin cambiar el comportamiento |
-| `style:`    | Cambios visuales o de formato                |
-| `docs:`     | Documentación                                |
+La estructura del proyecto se organiza de la siguiente forma:
 
 
 
-##  6. Subir tu rama al repositorio
-```bash
-git push origin feature/login-page
-```
+---
 
-Esto crea la rama en GitHub para que los demás puedan verla.
+## Instrucciones de Uso
 
-##  7. Crear un Pull Request (PR)
+### Configuración Inicial
 
-En GitHub:
+1. **Clona el repositorio:**
+   ```bash
+   git clone https://github.com/cristianpy09/NextCommerce_TS.git
 
-Ve a la pestaña Pull Requests
+2. **Instala dependecias:**
+    ```bash
+    npm install
 
-Clic en New Pull Request
+3. **Corre el proyecto:**
+    ```bash
+    npm run dev
 
-Selecciona:
 
-Base: develop
 
-Compare: tu rama (feature/login-page)
+## Uso del UserStore
+### El UserStore se encarga de gestionar usuarios y realizar operaciones CRUD. Aquí te explicamos cómo usarlo paso a paso:
 
-Describe tus cambios claramente
+1. **Importar el UserStore:**
 
-Espera revisión o aprobación del líder (tú)
+    Primero, asegúrate de importar el UserStore en el archivo donde lo necesites.
+    typescript
 
-##  8. Revisión y Merge
+    ```bash
+        import { UserStore } from './utils/UserStore';
+    ```
+2. **Crear una instancia del UserStore:**
+    
+        Crea una instancia para poder interactuar con el almacenamiento de usuarios.
+    ```bash
+        const userStore = new UserStore();
+    ```
 
-Cuando el PR esté revisado y aprobado:
+3. **Añadir un nuevo usuario:**
+    
+    Usa el método create para agregar un nuevo usuario. El decorador se encargará de enriquecer el objeto automáticamente.
+    ```bash
 
-Se hace merge a develop
+        userStore.create({
+            id: '1',
+            fullName: 'Juan Pérez',
+            email: 'juan@example.com',
+            isActive: true,
+            role: '',
+            createdAt: new Date(),
+            // propiedades opcionales
+        });
 
-Luego se borra la rama de la feature (para mantener el repo limpio).
+3. **Listar usuarios:**
 
-Puedes hacerlo desde GitHub con “Delete branch” después del merge, o por consola:
-```bash
-git branch -d feature/login-page
-git push origin --delete feature/login-page
-```
-##  9. Actualizar tu entorno local
+    Llama al método list para obtener todos los usuarios.
+    ```bash
+    const allUsers = userStore.list();
+    console.log(allUsers);
+    ```
 
-Cada vez que algo se fusione en develop, los demás actualizan su código:
-```bash
-git checkout develop
-git pull origin develop
-```
+4. **Buscar un usuario por nombre:**
 
-Y si estás en otra feature:
-```bash
-git checkout feature/otra-tarea
-git merge develop
+    Utiliza findByName para encontrar un usuario específico.
 
-```
+    ```bash
+    const user = userStore.findByName('Juan Pérez');
+    console.log(user);
+
+5. **Actualizar un usuario:**
+
+    Cambia la información de un usuario existente con el método update.
+
+    ```bash
+    userStore.update('1', { email: 'nuevo_email@example.com' });
+
+5. **Eliminar un usuario:**
+
+    Usa el método remove para borrar un usuario.
+    ```bash
+    userStore.remove('1');
 
