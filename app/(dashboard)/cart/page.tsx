@@ -35,8 +35,8 @@ export default function CartPage() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-10 text-gray-900">🛍️ Carrito</h1>
+    <div className="max-w-5xl mx-auto px-4 py-12 mt-6">
+      <h1 className="text-3xl font-bold mb-10 text-gray-900">Tu carrito</h1>
 
       {/* LISTA DE PRODUCTOS */}
       {cart.products.map((product) => (

@@ -10,7 +10,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Ropa",
     imageUrl:
-      "https://www.kindpng.com/picc/m/299-2992482_zapato-doble-hebilla-negro-mate-class-lazyload-lazyload.png",
+      "https://kidsrepublic.com.co/cdn/shop/files/G00204_990_002_0029b918-af70-42c6-9211-127477e1280c.jpg?v=1727823293&width=3840",
     createdAt: Date.now(),
     description: "Camiseta de algodón, color rojo",
     detailedDescription:
