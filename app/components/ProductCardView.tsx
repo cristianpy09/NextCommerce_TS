@@ -4,6 +4,7 @@ import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { Product } from "../types/productsType";
 import Button from "./Button";
+import Swal from "sweetalert2";
 
 
 type Props = {
@@ -77,14 +78,17 @@ export default function ProductCardView({
     
       const handleAdd = () => {
         cart?.addProduct(product);
-        console.log("añadido");
-        
+        Swal.fire({
+          title: "¡Añadido al carrito!",
+          text: `Has añadido ${qty} unidad(es) de "${name}" al carrito.`,
+          icon: "success",
+          draggable: true
+        });
+        if (onAddToCartAction) {
+          onAddToCartAction(qty);
+        }
       };
     
-   
-
-    
- 
 
   
   return (

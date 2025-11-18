@@ -3,6 +3,7 @@
 import Button from "@/app/components/Button";
 import { CartContext } from "@/app/context/CartContext";
 import { useContext } from "react";
+import Swal from "sweetalert2";
 
 
 
@@ -10,9 +11,22 @@ import { useContext } from "react";
 export default function CartPage() {
   
   const cart = useContext(CartContext);
-  const handleDelete =(id:string)=>{
-    cart?.deleteProduct(id)
-  }
+  const handleDelete = (id: string) => {
+    Swal.fire({
+      title: "¿Quieres eliminar este producto?",
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Eliminar",
+      denyButtonText: "No eliminar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        cart?.deleteProduct(id);
+        Swal.fire("¡Producto eliminado!", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("El producto no fue eliminado", "", "info");
+      }
+    });
+  };
   if (!cart || cart.products.length === 0) {
     return <p className="text-center mt-10">Tu carrito está vacío 🛒</p>;
   }
