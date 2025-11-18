@@ -1,7 +1,5 @@
-
-import ProductCard from "@/app/components/ProductCard";
+import ProductCardView from "@/app/components/ProductCardView";
 import { products } from "@/app/data/products";
-import React from "react";
 
 interface Props {
   params: {
@@ -9,22 +7,40 @@ interface Props {
   };
 }
 
-export default async function ProductDetailpage({ params }: Props) {
-  const data = products;
-  const { id } = await params;
-  const producto = data.find((p) => p.sku === id);
+export default function ProductDetailPage({ params }: Props) {
+  const { id } = params;
 
-  if (producto) {
+  const producto = products.find((p) => p.sku === id);
+
+  if (!producto) {
     return (
-      <div>
-        <ProductCard
-          name={producto.name}
-          category={producto.category}
-          description={producto.description}
-          price={producto.price}
-          img={producto.imageUrl}
-        />
+      <div className="text-center pt-40 text-gray-600">
+        Producto no encontrado ❌
       </div>
     );
   }
+
+  return (
+    <div className="pt-28 pb-10 max-w-6xl mx-auto px-5">
+      <ProductCardView
+        mode="detail"
+        product={producto}
+        name={producto.name}
+        img={producto.imageUrl}
+        description={producto.description}
+        detailedDescription={producto.detailedDescription}
+        category={producto.category}
+        price={producto.price}
+        sku={producto.sku}
+        brand={producto.brand}
+        rating={producto.rating}
+        reviews={producto.reviews}
+        tags={producto.tags}
+        color={producto.color}
+        material={producto.material}
+        dimensions={producto.dimensions}
+        manufacturer={producto.manufacturer}
+      />
+    </div>
+  );
 }

@@ -1,85 +1,54 @@
 import React from "react";
 
-export default function () {
-  return (
-    
-      <form className="" >
-       
-        <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Electrónica"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Audio"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Ropa"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Calzado"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Hogar"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Muebles"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Fotografía"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Cocina"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Deporte"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Iluminación"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Salud"
-        />
-         <input 
-          className="btn"
-          type="checkbox"
-          name="frameworks"
-          aria-label="Transporte"
-        />
+const categories = [
+  "Electrónica",
+  "Audio",
+  "Ropa",
+  "Calzado",
+  "Hogar",
+  "Muebles",
+  "Fotografía",
+  "Cocina",
+  "Deporte",
+  "Iluminación",
+  "Salud",
+  "Transporte",
+];
 
-        <input className="btn btn-square" type="reset" value="×" />
-      </form>
-    
+export default function CategoryFilter() {
+  return (
+    <form className="flex flex-wrap gap-2 items-center bg-gray-5">
+      {categories.map((cat) => (
+        <label
+          key={cat}
+          className="
+            flex items-center gap-2 px-4 py-2 rounded-full border 
+            border-gray-300 bg-white text-gray-700 text-sm cursor-pointer 
+            transition select-none
+            hover:bg-gray-100 hover:border-gray-400
+            active:scale-[0.97]
+          "
+        >
+          <input
+            type="checkbox"
+            name="categories"
+            value={cat}
+            className="accent-blue-600 w-4 h-4"
+          />
+          {cat}
+        </label>
+      ))}
+
+      {/* Reset */}
+      <button
+        type="reset"
+        className="
+          ml-2 px-3 py-2 rounded-full border border-red-300 text-red-500 
+          text-sm hover:bg-red-50 transition
+        "
+      >
+        Limpiar
+      </button>
+    </form>
   );
 }
