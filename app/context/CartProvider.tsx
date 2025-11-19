@@ -30,7 +30,7 @@ export default function CartProvider({ children }: props) {
   };
   return (
     <CartContext.Provider
-      value={{ products, setProducts, addProduct, deleteProduct }}
+      value={{ products, setProducts, addProduct, deleteProduct,productosfinales,setProductosfinales }}
     >
       {children}
     </CartContext.Provider>

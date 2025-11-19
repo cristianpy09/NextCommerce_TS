@@ -1,12 +1,18 @@
-import React from "react";
+"use client"
+
+import React, { useContext } from "react";
 import { products } from "../data/products";
 import { Product } from "../types/productsType";
 import ProductCard from "./ProductCard";
+import { CartContext } from "../context/CartContext";
 
 
 export default function ProductList() {
   const data = products;
-
+  const Products = useContext(CartContext);
+  if (Products) {
+    const listaProductos=Products.productosfinales
+  
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center py-10 px-5">
       
@@ -17,7 +23,7 @@ export default function ProductList() {
     gap-6
   "
       >
-        {data.map((u: Product) => (
+        {listaProductos.map((u: Product) => (
           <ProductCard
             key={u.sku}
             name={u.name}
@@ -32,4 +38,4 @@ export default function ProductList() {
       
     </div>
   );
-}
+}}

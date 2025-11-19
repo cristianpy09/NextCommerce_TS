@@ -5,17 +5,24 @@ import SearchBar from "./SearchBar";
 import Link from "next/link";
 import { CartContext } from "../context/CartContext";
 import { redirect } from "next/navigation";
+import { products } from "../data/products";
 
 export default function Header() {
   const cart = useContext(CartContext);
-
+  const resetProducts =()=>{
+    const setNuevo= cart?.setProductosfinales
+    if (setNuevo) {
+      setNuevo(products)
+    }
+    
+  }
   const count = cart ? cart.products.length : 0;
 
   return (
     <header className="w-full fixed left-0 top-0 z-50 bg-yellow-200 border-b border-gray-200 shadow-sm">
       <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Branding */}
-        <Link href="/" className="text-2xl font-bold text-gray-800">
+        <Link onClick={resetProducts} href="/" className="text-2xl font-bold text-gray-800">
           Ecommerce<span className="text-blue-600">Lite</span>
         </Link>
 

@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { CartContext } from "../context/CartContext";
 
 export default function SearchBar() {
   const [text, setText] = useState("");
   const [debounced, setDebounced] = useState("");
   const [open, setOpen] = useState(false);
-
+  const Products = useContext(CartContext);
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebounced(text);
@@ -19,12 +20,16 @@ export default function SearchBar() {
   }, [debounced]);
 
   const clickBusqueda = (e:any)=>{
-    if (debounced==="calzado") {
+    if (debounced==="Calzado") {
       console.log("solo mostrar calzado");
-      
+       
+        if (Products) {
+          const filterProducts=Products.productosfinales.filter(product=>(product.category==="Calzado"))
+          const setProductos = Products.setProductosfinales
+          setProductos(filterProducts)
     }
     setOpen(false)
-  }
+  }  }
   return (
     <>
       <div className="dropdown w-full">
@@ -69,5 +74,4 @@ export default function SearchBar() {
         )}
       </div>
     </>
-  );
-}
+)}
