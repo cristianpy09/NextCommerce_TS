@@ -16,7 +16,7 @@ export default function Badge({ label, status = "success" }: Props) {
 
   return (
     <h1
-      className={`absolute left-1/2 ${statusOptions[status]} text-white text-xs font-bold px-2 py-1 rounded `}
+      className={`absolute right-0.5 ${statusOptions[status]} text-white text-xs font-bold px-2 py-1 rounded `}
     >
       {label}
     </h1>

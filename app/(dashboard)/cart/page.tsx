@@ -5,9 +5,6 @@ import { CartContext } from "@/app/context/CartContext";
 import { useContext } from "react";
 import Swal from "sweetalert2";
 
-
-
-
 export default function CartPage() {
   const cart = useContext(CartContext);
   const handleDelete = (id: string) => {
@@ -54,7 +51,9 @@ export default function CartPage() {
             />
 
             <div className="ml-6">
-              <h2 className="text-xl font-semibold text-gray-900">{product.name}</h2>
+              <h2 className="text-xl font-semibold text-gray-900">
+                {product.name}
+              </h2>
               <p className="text-sm text-gray-600 mt-1">
                 Categoría:{" "}
                 <span className="rounded-full bg-blue-100 px-2 py-0.5 text-blue-700 text-xs ml-1">
@@ -92,10 +91,7 @@ export default function CartPage() {
           <div className="flex justify-between">
             <span>Subtotal</span>
             <span className="font-medium">
-              $
-              {cart.products
-                .reduce((sum, p) => sum + p.price, 0)
-                .toFixed(2)}
+              ${cart.products.reduce((sum, p) => sum + p.price, 0).toFixed(2)}
             </span>
           </div>
 
@@ -106,11 +102,7 @@ export default function CartPage() {
         </div>
 
         <div className="mt-6">
-          <Button
-            text="Proceder al pago"
-            size="md"
-            variant="modern"
-          />
+          <Button text="Proceder al pago" size="md" variant="modern" />
         </div>
       </div>
     </div>

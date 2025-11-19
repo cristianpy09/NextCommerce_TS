@@ -27,8 +27,12 @@ export default function ProductCard(props: Prop) {
         
       {/* Imagen */}
       <div className="relative w-full h-52 bg-gray-100">
-      <Badge label="oferta " status="info" />
-        <img src={img} alt={name} className="w-full h-full object-cover" />
+        {category==="Electrónica"? <Badge label="oferta " status="info" />:<h1></h1>}
+          
+
+                      
+      
+      <img src={img} alt={name} className="w-full h-full object-cover" />
       </div>
 
       {/* Contenido */}
@@ -68,6 +72,6 @@ export default function ProductCard(props: Prop) {
         </Link>
       </div>
     </article>
-       
+        
   );
 }
