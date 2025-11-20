@@ -14,7 +14,7 @@ export default function SearchBar() {
 
     if (!Products) return;
 
-    if (value.length >= 2) {
+    if (value.length >= 1) {
       const filtered = products.filter((item) =>
         item.name.toLowerCase().includes(value.toLowerCase())
       );
