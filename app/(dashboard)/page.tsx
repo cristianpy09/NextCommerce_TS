@@ -9,7 +9,7 @@ export default function Dashboard() {
      
       <Carrousell/>
       {/* PRODUCT GRID */}
-      <div className="w-auto  ">
+      <div >
         <ProductList />
       </div>
     </section>
