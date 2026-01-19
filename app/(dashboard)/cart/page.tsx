@@ -1,9 +1,10 @@
 "use client";
 
-import Button from "@/app/components/Button";
+import Button from "@/app/components/ui/Button";
 import { CartContext } from "@/app/context/CartContext";
 import { useContext } from "react";
 import Swal from "sweetalert2";
+import Link from "next/link";
 
 export default function CartPage() {
   const cart = useContext(CartContext);
@@ -23,7 +24,7 @@ export default function CartPage() {
       }
     });
   };
-  if (!cart || cart.products.length === 0) {
+  if (!cart || cart.cartItems.length === 0) {
     return (
       <div className="text-center mt-20">
         <p className="text-gray-600 text-lg">Tu carrito está vacío 🛒</p>
@@ -36,7 +37,7 @@ export default function CartPage() {
       <h1 className="text-3xl font-bold mb-10 text-gray-900">Tu carrito</h1>
 
       {/* LISTA DE PRODUCTOS */}
-      {cart.products.map((product) => (
+      {cart.cartItems.map((product) => (
         <div
           key={product.sku}
           className="flex flex-col md:flex-row items-start md:items-center justify-between 
@@ -61,7 +62,10 @@ export default function CartPage() {
                 </span>
               </p>
 
-              <p className="text-sm text-gray-600 mt-1">Cantidad: 1</p>
+              <p className="text-sm text-gray-600 mt-1">Cantidad: {product.quantity || 1}</p>
+              {/* Note: product.quantity from Context is cart quantity. Product type has quantity as stock? 
+                  I am overloading it. Ideally display separate field. 
+              */}
 
               <div className="mt-3">
                 <Button
@@ -77,8 +81,11 @@ export default function CartPage() {
           {/* Precio */}
           <div className="mt-4 md:mt-0 text-right">
             <p className="text-lg font-bold text-blue-600">
-              ${product.price.toFixed(2)}
+              ${(product.price * (product.quantity || 1)).toFixed(2)}
             </p>
+            {(product.quantity || 1) > 1 && (
+              <p className="text-xs text-gray-500">${product.price} c/u</p>
+            )}
           </div>
         </div>
       ))}
@@ -91,7 +98,7 @@ export default function CartPage() {
           <div className="flex justify-between">
             <span>Subtotal</span>
             <span className="font-medium">
-              ${cart.products.reduce((sum, p) => sum + p.price, 0).toFixed(2)}
+              ${cart.cartItems.reduce((sum, p) => sum + p.price * (p.quantity || 1), 0).toFixed(2)}
             </span>
           </div>
 
@@ -102,7 +109,9 @@ export default function CartPage() {
         </div>
 
         <div className="mt-6">
-          <Button text="Proceder al pago" size="md" variant="modern" />
+          <Link href="/checkout">
+            <Button text="Proceder al pago" size="md" variant="modern" className="w-full md:w-auto" />
+          </Link>
         </div>
       </div>
     </div>

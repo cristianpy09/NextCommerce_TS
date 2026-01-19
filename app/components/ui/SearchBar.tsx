@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useContext, useEffect, useState } from "react";
-import { CartContext } from "../context/CartContext";
-import { products } from "../data/products";
+import { CartContext } from "@/app/context/CartContext";
+import { products } from "@/app/data/products";
 
 export default function SearchBar() {
   const [search, setSearch] = useState("");
@@ -19,9 +19,9 @@ export default function SearchBar() {
         item.name.toLowerCase().includes(value.toLowerCase())
       );
 
-      Products.setProductosfinales(filtered);
+      Products.setDisplayProducts(filtered);
     } else {
-      Products.setProductosfinales(products);
+      Products.setDisplayProducts(products);
     }
   };
 
@@ -32,7 +32,7 @@ export default function SearchBar() {
       (item) => item.category.toLowerCase() === categoria.toLowerCase()
     );
 
-    Products.setProductosfinales(filtered);
+    Products.setDisplayProducts(filtered);
   };
 
   return (

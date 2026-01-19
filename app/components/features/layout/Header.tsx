@@ -1,22 +1,22 @@
 "use client";
 
 import { useContext } from "react";
-import SearchBar from "./SearchBar";
+import SearchBar from "@/app/components/ui/SearchBar";
 import Link from "next/link";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "@/app/context/CartContext";
 import { redirect } from "next/navigation";
-import { products } from "../data/products";
+import { products } from "@/app/data/products";
 
 export default function Header() {
   const cart = useContext(CartContext);
-  const resetProducts =()=>{
-    const setNuevo= cart?.setProductosfinales
+  const resetProducts = () => {
+    const setNuevo = cart?.setDisplayProducts
     if (setNuevo) {
       setNuevo(products)
     }
-    
+
   }
-  const count = cart ? cart.products.length : 0;
+  const count = cart ? cart.cartItems.reduce((acc, item) => acc + (item.quantity || 1), 0) : 0;
 
   return (
     <header className="w-full fixed left-0 top-0 z-50 bg-yellow-200 border-b border-gray-200 shadow-sm">

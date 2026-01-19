@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import Button from "./Button";
-import Badge from "./Badge";
+import Button from "../../ui/Button";
+import Badge from "../../ui/Badge";
 
 type Prop = {
   name: string;
