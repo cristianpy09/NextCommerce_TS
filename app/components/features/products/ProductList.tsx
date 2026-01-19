@@ -18,6 +18,7 @@ export default function ProductList({ filteredProducts }: ProductListProps) {
           <ProductCardView
             key={product.sku}
             {...product}
+            img={product.imageUrl}
             product={product}
           />
         ))

@@ -7,9 +7,9 @@ A professional, feature-rich e-commerce application built with **Next.js 16**, *
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)
 
-## ✨ Features
+##  Features
 
-### 🛍️ Shopping Experience
+###  Shopping Experience
 - **Product Catalog** with high-quality imagery and detailed information
 - **Advanced Filtering & Sorting** by category, price range, and relevance
 - **Product Search** with instant results
@@ -18,13 +18,13 @@ A professional, feature-rich e-commerce application built with **Next.js 16**, *
 - **Related Products** recommendations on detail pages
 - **Product Reviews** with star ratings (user-generated)
 
-### 👤 User Management
+###  User Management
 - **Mock Authentication** system with login/logout
 - **User Profile** with editable information
 - **Order History** tracking with status updates
 - **Persistent Sessions** via localStorage
 
-### 🎨 UI/UX Excellence
+###  UI/UX Excellence
 - **Framer Motion** animations for smooth transitions
 - **Lucide React** icons for consistent design language
 - **Sonner** toast notifications for user feedback
@@ -42,7 +42,7 @@ A professional, feature-rich e-commerce application built with **Next.js 16**, *
 - **Form Validation**: React Hook Form + Zod
 - **Modular Architecture** with clear separation of concerns
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js 18+ 
@@ -80,7 +80,7 @@ npm run format       # Format code with Prettier
 npm test             # Run tests with Vitest
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 NextCommerce_TS/
@@ -110,7 +110,7 @@ NextCommerce_TS/
 └── package.json
 ```
 
-## 🎯 Key Technologies
+##  Key Technologies
 
 ### Core
 - **Next.js 16** - React framework with App Router
@@ -133,7 +133,7 @@ NextCommerce_TS/
 - **Prettier** - Code formatting
 - **Vitest** - Unit testing
 
-## 🌟 Feature Highlights
+##  Feature Highlights
 
 ### Product Filtering System
 Advanced sidebar filtering with:
@@ -163,7 +163,7 @@ Interactive product reviews:
 - User authentication required
 - Display on product pages
 
-## 🎨 Design Philosophy
+##  Design Philosophy
 
 This project emphasizes:
 - **Visual Excellence**: Premium aesthetics with modern design patterns
@@ -172,7 +172,7 @@ This project emphasizes:
 - **Accessibility**: Semantic HTML and ARIA labels
 - **Responsiveness**: Mobile-first approach
 
-## 📝 Mock Data
+##  Mock Data
 
 The application uses mock data for:
 - **Products**: 24 sample products across multiple categories
@@ -180,7 +180,7 @@ The application uses mock data for:
 - **Orders**: Client-side order history
 - **Reviews**: Pre-populated product reviews
 
-## 🔐 Authentication
+##  Authentication
 
 **Note**: This project uses a **mock authentication system** for demonstration purposes. In a production environment, you should implement:
 - Backend API with secure authentication
@@ -188,7 +188,7 @@ The application uses mock data for:
 - Password hashing
 - OAuth integration (Google, Facebook, etc.)
 
-## 🚧 Future Enhancements
+##  Future Enhancements
 
 Potential improvements:
 - [ ] Backend API integration
@@ -200,18 +200,18 @@ Potential improvements:
 - [ ] Dark mode toggle
 - [ ] Advanced analytics
 
-## 📄 License
+##  License
 
 This project is open source and available under the MIT License.
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📧 Contact
+##  Contact
 
 For questions or feedback, please visit the [Contact Page](/contact) or reach out via email.
 
 ---
 
-**Built with ❤️ using Next.js and TypeScript**
+**Built with  using Next.js and TypeScript**
