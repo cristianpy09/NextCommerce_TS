@@ -1,4 +1,5 @@
 import DetailsCard from "@/app/components/features/products/DetailsCard";
+import RelatedProducts from "@/app/components/features/products/RelatedProducts";
 import Notfound from "@/app/components/ui/NotFoundComponent";
 import ProductCard from "@/app/components/features/products/ProductCard";
 import ProductCardView from "@/app/components/features/products/ProductCardView";
@@ -71,6 +72,9 @@ export default async function ProductDetailpage({ params }: Props) {
           reviews={producto.reviews}
           tags={producto.tags}
         />
+        <div className="max-w-7xl mx-auto px-4 pb-12">
+          <RelatedProducts currentCategory={producto.category} currentProductId={producto.sku} />
+        </div>
       </div>
     )
   } else redirect(notFound())

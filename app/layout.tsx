@@ -20,6 +20,8 @@ export const metadata: Metadata = {
 };
 
 import Footer from "./components/features/layout/Footer";
+import { Toaster } from "sonner";
+import { WishlistProvider } from "./context/WishlistContext";
 
 export default function RootLayout({
   children,
@@ -30,12 +32,17 @@ export default function RootLayout({
 
   return (
     <CartProvider>
-      <html data-theme="corporate" lang="es" className={roboto.className}>
-        <body className="flex flex-col min-h-screen">
-          {children}
-          <Footer />
-        </body>
-      </html>
+      <WishlistProvider>
+        <html data-theme="corporate" lang="es" className={roboto.className}>
+          <body className="flex flex-col min-h-screen">
+            <Toaster richColors position="top-center" />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+          </body>
+        </html>
+      </WishlistProvider>
     </CartProvider>
   );
 }

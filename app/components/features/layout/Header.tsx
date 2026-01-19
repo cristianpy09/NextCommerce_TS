@@ -6,6 +6,7 @@ import Link from "next/link";
 import { CartContext } from "@/app/context/CartContext";
 import { redirect } from "next/navigation";
 import { products } from "@/app/data/products";
+import { ShoppingBag, User, LogOut, Heart } from "lucide-react";
 
 export default function Header() {
   const cart = useContext(CartContext);
@@ -19,56 +20,42 @@ export default function Header() {
   const count = cart ? cart.cartItems.reduce((acc, item) => acc + (item.quantity || 1), 0) : 0;
 
   return (
-    <header className="w-full fixed left-0 top-0 z-50 bg-yellow-200 border-b border-gray-200 shadow-sm">
-      <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <header className="w-full fixed left-0 top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
+      <nav className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Branding */}
-        <Link onClick={resetProducts} href="/" className="text-2xl font-bold text-gray-800">
+        <Link onClick={resetProducts} href="/" className="text-2xl font-bold text-gray-900 tracking-tight">
           Ecommerce<span className="text-blue-600">Lite</span>
         </Link>
 
         {/* Center: Search bar */}
-        <div className="hidden md:block flex-1 px-6">
+        <div className="hidden md:block flex-1 max-w-xl px-8">
           <SearchBar />
         </div>
 
         {/* Right section */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
+          {/* Wishlist */}
+          <Link href="/wishlist">
+            <button
+              className="relative p-2 rounded-full hover:bg-gray-100 transition text-gray-600 hover:text-red-500"
+            >
+              <Heart size={24} />
+            </button>
+          </Link>
+
           {/* Cart */}
           <Link href="/cart">
             <button
-              className=" cursor-pointer
-                relative w-10 h-10 flex items-center justify-center 
-                rounded-full hover:bg-gray-100 transition
-              "
+              className="relative p-2 rounded-full hover:bg-gray-100 transition text-gray-600 hover:text-blue-600"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-gray-700"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 
-                    2.293c-.63.63-.184 1.707.707 1.707H17m0 
-                    0a2 2 0 100 4 2 2 0 000-4zm-8 
-                    2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
+              <ShoppingBag size={24} />
 
               {/* Badge */}
-              <span
-                className="
-                  absolute -top-1 -right-1 bg-blue-600 text-white 
-                  text-xs w-5 h-5 flex items-center justify-center 
-                  rounded-full
-                "
-              >
-                {count}
-              </span>
+              {count > 0 && (
+                <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white">
+                  {count}
+                </span>
+              )}
             </button>
           </Link>
 

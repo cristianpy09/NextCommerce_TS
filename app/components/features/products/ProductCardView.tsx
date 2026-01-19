@@ -2,13 +2,15 @@
 import Link from "next/link";
 import React, { useContext, useState } from "react";
 import { CartContext } from "@/app/context/CartContext";
+import { useWishlist } from "@/app/context/WishlistContext";
 import { Product } from "@/app/types/productsType";
 import Button from "../../ui/Button";
-import Swal from "sweetalert2";
-
+import { toast } from "sonner";
+import { Heart } from "lucide-react";
+import { motion } from "framer-motion";
 
 type Props = {
-  product: Product
+  product: Product;
   name: string;
   img?: string;
   description?: string;
@@ -61,11 +63,23 @@ export default function ProductCardView({
   const [qty, setQty] = useState<number>(1);
   const [mainImg, setMainImg] = useState<string | undefined>(img);
 
-  // Estadísticas de reseñas (uso en la vista detalle)
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+  const isFavorite = sku ? isInWishlist(sku) : false;
+
+  const toggleWishlist = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (isFavorite && sku) {
+      removeFromWishlist(sku);
+    } else {
+      addToWishlist(product);
+    }
+  };
+
+  // Estadísticas de reseñas
   const totalReviews = reviews?.length ?? 0;
   const computedAvg = totalReviews ? reviews!.reduce((s, r) => s + (r.rating || 0), 0) / totalReviews : undefined;
   const avgRating = rating ?? (computedAvg ? Number(computedAvg.toFixed(1)) : undefined);
-  const ratingCounts = [0, 0, 0, 0, 0]; // índices 0=>1 estrella ... 4=>5 estrellas
+  const ratingCounts = [0, 0, 0, 0, 0];
   if (reviews && reviews.length) {
     reviews.forEach((r) => {
       const idx = Math.max(0, Math.min(4, (r.rating || 1) - 1));
@@ -75,280 +89,179 @@ export default function ProductCardView({
 
   const cart = useContext(CartContext);
 
-
   const handleAdd = () => {
     cart?.addProduct(product);
-    Swal.fire({
-      title: "¡Añadido al carrito!",
-      text: `Has añadido ${qty} unidad(es) de "${name}" al carrito.`,
-      icon: "success",
-      draggable: true
-    });
+    toast.success(`Añadido ${qty} x ${name} al carrito`);
     if (onAddToCartAction) {
       onAddToCartAction(qty);
     }
   };
 
-
-
-  return (
-    <article
-      className={`flex flex-col bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden 
-                hover:shadow-md transition ${isDetail ? "max-w-5xl mx-auto" : ""}`}
-    >
-      {isDetail ? (
-        /* ================================
-           🟦  VISTA DETALLE DE PRODUCTO
-           ================================ */
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-10">
-
-          {/* IMAGEN PRINCIPAL + MINIATURAS */}
+  if (isDetail) {
+    return (
+      <div className="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden p-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* IMÁGENES */}
           <div>
-            {/* Imagen grande */}
-            <div className="relative w-full h-96 bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-4">
+            <motion.div
+              layoutId={`image-${sku}`}
+              className="relative w-full h-[500px] bg-gray-50 rounded-xl overflow-hidden mb-4"
+            >
               <img
                 src={mainImg}
                 alt={name}
-                className="w-full h-full object-contain p-6"
+                className="w-full h-full object-contain p-8 mix-blend-multiply"
               />
-            </div>
-
+              <button
+                onClick={toggleWishlist}
+                className="absolute top-4 right-4 p-3 bg-white rounded-full shadow-md hover:scale-110 transition z-10"
+              >
+                <Heart
+                  className={isFavorite ? "fill-red-500 text-red-500" : "text-gray-400"}
+                  size={24}
+                />
+              </button>
+            </motion.div>
             {/* Miniaturas */}
-            <div className="flex gap-3 justify-center">
+            <div className="flex gap-4 justify-center">
               {[img, img, img].map((src, i) => (
                 <button
                   key={i}
                   onClick={() => setMainImg(src)}
-                  className={`w-20 h-20 border rounded-lg overflow-hidden 
+                  className={`w-24 h-24 border rounded-xl overflow-hidden 
                           hover:border-blue-500 transition 
-                          ${mainImg === src ? "border-blue-500" : "border-gray-300"}`}
+                          ${mainImg === src ? "border-blue-500 ring-2 ring-blue-100" : "border-gray-200"}`}
                 >
                   <img src={src} className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>
-
-            {/* Panel de reseñas */}
-            <div className="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-xl">
-              <div className="flex items-start gap-6">
-
-                {/* Promedio */}
-                <div className="text-center pr-6 border-r border-gray-200">
-                  <div className="text-4xl font-bold text-blue-600">
-                    {avgRating ?? "—"}
-                  </div>
-                  <p className="text-xs text-gray-500 mt-1">
-                    {totalReviews} reseñas
-                  </p>
-                </div>
-
-                {/* Barras */}
-                <div className="flex-1">
-                  {[5, 4, 3, 2, 1].map((star) => {
-                    const count = ratingCounts[star - 1] || 0;
-                    const pct = totalReviews ? Math.round((count / totalReviews) * 100) : 0;
-
-                    return (
-                      <div key={star} className="flex items-center gap-2 mb-2">
-                        <span className="text-xs w-6 text-gray-600">{star}★</span>
-                        <div className="w-full h-2 bg-gray-200 rounded overflow-hidden">
-                          <div
-                            className="h-2 bg-blue-500"
-                            style={{ width: `${pct}%` }}
-                          />
-                        </div>
-                        <span className="text-xs w-8 text-gray-600 text-right">{count}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Tres reseñas */}
-              {reviews && reviews.length > 0 && (
-                <div className="mt-5 space-y-3">
-                  {reviews.slice(0, 3).map((r, i) => (
-                    <div key={i} className="p-3 bg-white border border-gray-200 rounded-lg">
-                      <div className="flex items-center justify-between">
-                        <div className="font-medium text-sm text-gray-800">{r.username}</div>
-                        <div className="text-yellow-500 text-sm">
-                          {"★".repeat(r.rating)}
-                        </div>
-                      </div>
-                      <p className="text-sm text-gray-600 mt-1">{r.comment}</p>
-                    </div>
-                  ))}
-
-                  {reviews.length > 3 && (
-                    <div className="text-center text-blue-600 text-sm font-medium cursor-pointer">
-                      Ver más reseñas
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
           </div>
 
-          {/* ==========================
-            INFORMACIÓN DEL PRODUCTO
-           ========================== */}
+          {/* INFO */}
           <div className="flex flex-col">
-
-            {/* Breadcrumb */}
-            <nav className="text-sm text-gray-500 mb-4">
-              <Link href="/" className="text-blue-600 hover:underline">Home</Link>
-              <span className="mx-2">›</span>
-              <span className="text-blue-600">{category}</span>
-              <span className="mx-2">›</span>
-              <span className="text-gray-800">{name}</span>
+            <nav className="text-sm text-gray-500 mb-6 flex items-center gap-2">
+              <Link href="/" className="hover:text-blue-600 transition">Inicio</Link>
+              <span>/</span>
+              <span className="text-blue-600 font-medium">{category}</span>
             </nav>
 
-            {/* Nombre y Marca */}
-            <h1 className="text-3xl font-bold text-gray-900">{name}</h1>
-            {brand && (
-              <p className="text-gray-600 font-medium mt-1">
-                Marca: {brand}
-              </p>
-            )}
-
-            {/* Precio */}
-            <p className="text-4xl font-bold text-blue-600 mt-6">
-              ${price?.toFixed(2)}
-            </p>
-
-            {/* Descripción */}
-            <p className="text-gray-700 mt-6 leading-relaxed">
-              {detailedDescription}
-            </p>
-
-            {/* Datos técnicos */}
-            <div className="grid grid-cols-2 gap-4 mt-8 p-4 bg-gray-50 border border-gray-200 rounded-xl">
-              {color && (
-                <div>
-                  <p className="text-sm text-gray-500">Color</p>
-                  <p className="font-medium text-gray-800">{color}</p>
-                </div>
-              )}
-
-              {material && (
-                <div>
-                  <p className="text-sm text-gray-500">Material</p>
-                  <p className="font-medium text-gray-800">{material}</p>
-                </div>
-              )}
-
-              {manufacturer && (
-                <div>
-                  <p className="text-sm text-gray-500">Fabricante</p>
-                  <p className="font-medium text-gray-800">{manufacturer}</p>
-                </div>
-              )}
-
-              {dimensions && (
-                <div>
-                  <p className="text-sm text-gray-500">Dimensiones</p>
-                  <p className="font-medium text-gray-800">
-                    {dimensions.width}×{dimensions.height}×{dimensions.depth} cm
-                  </p>
+            <h1 className="text-4xl font-bold text-gray-900 tracking-tight mb-2">{name}</h1>
+            <div className="flex items-center gap-4 mb-6">
+              <span className="text-2xl font-bold text-gray-900">${price?.toFixed(2)}</span>
+              {avgRating && (
+                <div className="flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded text-yellow-700 text-sm font-medium">
+                  <span>★</span>
+                  <span>{avgRating}</span>
+                  <span className="text-gray-400 font-normal">({totalReviews} reseñas)</span>
                 </div>
               )}
             </div>
 
-            {/* SKU + Categoria */}
-            <div className="flex gap-6 mt-8 text-sm text-gray-700">
-              <div>
-                <span className="font-medium">SKU:</span>
-                <span className="ml-2 font-mono">{sku}</span>
+            <p className="text-gray-600 leading-relaxed text-lg mb-8">{detailedDescription}</p>
+
+            {/* Acciones */}
+            <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-100">
+              <div className="flex items-center border border-gray-300 rounded-lg">
+                <button
+                  className="px-4 py-2 hover:bg-gray-100 text-gray-600"
+                  onClick={() => setQty(Math.max(1, qty - 1))}
+                >-</button>
+                <span className="w-12 text-center font-medium">{qty}</span>
+                <button
+                  className="px-4 py-2 hover:bg-gray-100 text-gray-600"
+                  onClick={() => setQty(qty + 1)}
+                >+</button>
               </div>
-              <div>
-                <span className="font-medium">Categoría:</span>
-                <span className="ml-2 bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
-                  {category}
-                </span>
-
-              </div>
-            </div>
-
-            {/* Tags */}
-            {tags && (
-              <div className="mt-6">
-                <p className="text-sm text-gray-600 font-semibold mb-2">Etiquetas:</p>
-                <div className="flex flex-wrap gap-2">
-                  {tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 text-xs bg-gray-200 text-gray-700 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Cantidad + Botón */}
-            <div className="flex items-center gap-4 mt-auto pt-8 border-t border-gray-200">
-              <label className="font-medium text-gray-800 flex items-center gap-3">
-                Cantidad:
-                <input
-                  type="number"
-                  min={1}
-                  value={qty}
-                  onChange={(e) => setQty(Math.max(1, Number(e.target.value)))}
-                  className="w-20 p-2 border border-gray-300 rounded-lg text-center"
-                />
-              </label>
-
-              <Button
-                text="Añadir al carrito"
-                size="lg"
-                variant="modern"
+              <button
                 onClick={handleAdd}
-              />
+                className="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-200"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+
+            {/* Detalles Técnicos */}
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <span className="block text-gray-500 mb-1">Marca</span>
+                <span className="font-medium text-gray-900">{brand}</span>
+              </div>
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <span className="block text-gray-500 mb-1">SKU</span>
+                <span className="font-medium text-gray-900">{sku}</span>
+              </div>
+              {material && (
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <span className="block text-gray-500 mb-1">Material</span>
+                  <span className="font-medium text-gray-900">{material}</span>
+                </div>
+              )}
+              {dimensions && (
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <span className="block text-gray-500 mb-1">Dimensiones</span>
+                  <span className="font-medium text-gray-900">{dimensions.width}x{dimensions.height}x{dimensions.depth} cm</span>
+                </div>
+              )}
             </div>
 
           </div>
         </div>
-      ) : (
-        /* ==========================
-           CARD PARA LISTA
-           ========================== */
-        <>
-          {/* Imagen */}
-          <div className="relative w-full h-52 overflow-hidden bg-gray-100">
-            <img src={mainImg} alt={name} className="w-full h-full object-cover" />
-          </div>
+      </div>
+    );
+  }
 
-          {/* Body */}
-          <div className="flex flex-col justify-between p-4 text-gray-800">
-            <h3 className="text-lg font-semibold">{name}</h3>
-            {brand && <p className="text-sm text-gray-500">Marca: {brand}</p>}
-            <p className="text-sm text-gray-500 line-clamp-2 mt-2">
-              {description}
-            </p>
+  // VISTA DE LISTA (CARD)
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full relative"
+    >
+      <button
+        onClick={toggleWishlist}
+        className="absolute top-3 right-3 p-2 bg-white/80 backdrop-blur-sm rounded-full shadow-sm hover:bg-red-50 transition z-10 opacity-0 group-hover:opacity-100"
+      >
+        <Heart
+          className={isFavorite ? "fill-red-500 text-red-500" : "text-gray-400"}
+          size={18}
+        />
+      </button>
 
-            <div className="flex items-center justify-between mt-4">
-              <span className="text-lg font-bold text-blue-600">
-                ${price?.toFixed(2)}
-              </span>
-              <span className="text-xs px-3 py-1 rounded-full bg-blue-100 text-blue-700">
-                {category}
-              </span>
-            </div>
-          </div>
+      <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
+        <img
+          src={mainImg}
+          alt={name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+      </div>
 
-          {/* Footer */}
-          <div className="flex items-center justify-between px-4 py-3 border-t border-gray-200 bg-gray-50">
-            <span className="uppercase text-xs text-gray-400">SKU: {sku}</span>
-            <Link href={`/${sku}`}>
-              <button className="px-4 py-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm transition">
-                Ver detalles
-              </button>
-            </Link>
-          </div>
-        </>
-      )}
-    </article>
+      <div className="p-5 flex flex-col flex-1">
+        <div className="mb-2">
+          <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-full uppercase tracking-wider">
+            {category}
+          </span>
+        </div>
+        <h3 className="text-lg font-bold text-gray-900 mb-1 line-clamp-1 group-hover:text-blue-600 transition">
+          {name}
+        </h3>
+        <p className="text-gray-500 text-sm line-clamp-2 mb-4 flex-1">
+          {description}
+        </p>
 
+        <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
+          <span className="text-xl font-bold text-gray-900">
+            ${price?.toFixed(2)}
+          </span>
+          <Link href={`/${sku}`}>
+            <span className="text-sm font-medium text-blue-600 hover:text-blue-800 transition">
+              Ver Detalles →
+            </span>
+          </Link>
+        </div>
+      </div>
+    </motion.article>
   );
 }

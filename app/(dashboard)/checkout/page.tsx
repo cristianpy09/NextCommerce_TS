@@ -7,7 +7,7 @@ import * as z from "zod";
 import Input from "@/app/components/ui/Input";
 import Button from "@/app/components/ui/Button";
 import { CartContext } from "@/app/context/CartContext";
-import Swal from "sweetalert2";
+import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
 const schema = z.object({
@@ -44,17 +44,13 @@ export default function CheckoutPage() {
 
         setIsProcessing(false);
 
-        Swal.fire({
-            title: "¡Pago Exitoso!",
-            text: `Gracias por tu compra, ${data.fullName}. Tu pedido llegará pronto.`,
-            icon: "success",
-        }).then(() => {
-            // Limpiar carrito (debería implementar clearCart en context, pero por ahora vaciamos manualmente si no existe)
-            if (cart) {
-                cart.setCartItems([]);
-            }
-            router.push("/");
-        });
+        toast.success(`¡Gracias ${data.fullName}! Tu compra ha sido procesada exitosamente.`);
+
+        // Limpiar carrito (debería implementar clearCart en context, pero por ahora vaciamos manualmente si no existe)
+        if (cart) {
+            cart.setCartItems([]);
+        }
+        router.push("/");
     };
 
     if (!cart || cart.cartItems.length === 0) {

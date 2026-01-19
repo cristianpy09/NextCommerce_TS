@@ -3,26 +3,37 @@
 import Button from "@/app/components/ui/Button";
 import { CartContext } from "@/app/context/CartContext";
 import { useContext } from "react";
-import Swal from "sweetalert2";
+import { toast } from "sonner";
+import { Trash2 } from "lucide-react";
 import Link from "next/link";
 
 export default function CartPage() {
   const cart = useContext(CartContext);
-  const handleDelete = (id: string) => {
-    Swal.fire({
-      title: "¿Quieres eliminar este producto?",
-      showDenyButton: true,
-      showCancelButton: true,
-      confirmButtonText: "Eliminar",
-      denyButtonText: "No eliminar",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        cart?.deleteProduct(id);
-        Swal.fire("¡Producto eliminado!", "", "success");
-      } else if (result.isDenied) {
-        Swal.fire("El producto no fue eliminado", "", "info");
-      }
-    });
+  const handleDelete = (id: string, name: string) => {
+    toast(
+      <div className="flex flex-col gap-2">
+        <p className="font-medium">¿Eliminar "{name}" del carrito?</p>
+        <div className="flex gap-2 mt-1">
+          <button
+            className="bg-red-500 text-white px-3 py-1 rounded-md text-sm hover:bg-red-600 transition"
+            onClick={() => {
+              cart?.deleteProduct(id);
+              toast.dismiss();
+              toast.success("Producto eliminado");
+            }}
+          >
+            Eliminar
+          </button>
+          <button
+            className="bg-gray-200 text-gray-800 px-3 py-1 rounded-md text-sm hover:bg-gray-300 transition"
+            onClick={() => toast.dismiss()}
+          >
+            Cancelar
+          </button>
+        </div>
+      </div>,
+      { duration: 5000 }
+    );
   };
   if (!cart || cart.cartItems.length === 0) {
     return (
@@ -68,12 +79,13 @@ export default function CartPage() {
               */}
 
               <div className="mt-3">
-                <Button
-                  text="Eliminar"
-                  size="sm"
-                  variant="danger"
-                  onClick={() => handleDelete(product.sku)}
-                />
+                <button
+                  className="flex items-center gap-1 text-red-500 hover:text-red-700 transition"
+                  onClick={() => handleDelete(product.sku, product.name)}
+                >
+                  <Trash2 size={18} />
+                  <span className="text-sm">Eliminar</span>
+                </button>
               </div>
             </div>
           </div>
