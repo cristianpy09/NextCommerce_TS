@@ -10,7 +10,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Ropa",
     imageUrl:
-      "https://kidsrepublic.com.co/cdn/shop/files/G00204_990_002_0029b918-af70-42c6-9211-127477e1280c.jpg?v=1727823293&width=3840",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Camiseta de algodón, color rojo",
     detailedDescription:
@@ -45,7 +45,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Calzado",
     imageUrl:
-      "https://www.kindpng.com/picc/m/299-2992482_zapato-doble-hebilla-negro-mate-class-lazyload-lazyload.png",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description:
       "Zapatos elegantes de cuero negro, ideales para ocasiones formales.",
@@ -80,7 +80,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Electrónica",
     imageUrl:
-      "https://www.kindpng.com/picc/m/460-4603107_samsung-akg-n700-hd-png-download.png",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Auriculares inalámbricos con cancelación de ruido.",
     detailedDescription:
@@ -115,7 +115,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Wearables",
     imageUrl:
-      "https://www.kindpng.com/picc/m/309-3093925_thumb-image-hd-png-download.png",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description:
       "Reloj inteligente con monitoreo de actividad y notificaciones.",
@@ -150,7 +150,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Computación",
     imageUrl:
-      "https://www.kindpng.com/picc/m/7-77839_png-black-and-white-download-best-mechanical-pc.png",
+      "https://images.unsplash.com/photo-1587829741301-dc798b91a95e?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Teclado mecánico con retroiluminación y teclas programables.",
     detailedDescription:
@@ -185,7 +185,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Computación",
     imageUrl:
-      "https://www.kindpng.com/picc/m/175-1757455_rival-300-black-gamer-mouse-3-side-buttons.png",
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Mouse ergonómico con iluminación RGB y alta precisión.",
     detailedDescription:
@@ -220,7 +220,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Fotografía",
     imageUrl:
-      "https://www.kindpng.com/picc/m/301-3010226_digital-camera-hd-png-download.png",
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Cámara digital de alta resolución con lente intercambiable.",
     detailedDescription:
@@ -255,7 +255,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Computación",
     imageUrl:
-      "https://www.kindpng.com/picc/m/106-1066670_laptop-intel-core-i5-lenovo-laptop-lenovo-g50.png",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description:
       "Laptop ultradelgada con alto rendimiento y gran portabilidad.",
@@ -290,7 +290,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Electrónica",
     imageUrl:
-      "https://www.kindpng.com/picc/m/57-572657_experia-tablet-png-image-sony-xperia-tablet-z.png",
+      "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description:
       "Tablet de 10 pulgadas con pantalla táctil y procesador rápido.",
@@ -326,7 +326,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Audio",
     imageUrl:
-      "https://www.kindpng.com/picc/m/601-6013129_altavoz-porttil-vieta-vm-bs28bk-con-hasta-7.png",
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Altavoz portátil con conexión Bluetooth y batería de 12h.",
     detailedDescription:
@@ -362,7 +362,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Computación",
     imageUrl:
-      "https://www.kindpng.com/picc/m/539-5395942_acer-4k-hdr-monitor-2018-hd-png-download.png",
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description:
       "Monitor 4K de 27 pulgadas con colores nítidos y alta resolución.",
@@ -398,7 +398,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Oficina",
     imageUrl:
-      "https://www.kindpng.com/picc/m/350-3509471_thumb-image-impresora-epson-tinta-continua-hd-png.png",
+      "https://images.unsplash.com/photo-1612815154858-60aa4c46ae96?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Impresora multifuncional con función de escaneo y copiado.",
     detailedDescription:
@@ -434,7 +434,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Almacenamiento",
     imageUrl:
-      "https://www.kindpng.com/picc/m/21-219940_hard-disc-png-disco-duro-1tb-toshiba-transparent.png",
+      "https://images.unsplash.com/photo-1531492253379-591684e4501e?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description:
       "Disco duro externo de 1TB para almacenamiento seguro y portátil.",
@@ -471,7 +471,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Redes",
     imageUrl:
-      "https://www.kindpng.com/picc/m/679-6795147_wifi-6-router-small-hd-png-download.png",
+      "https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Router de última generación con cobertura amplia.",
     detailedDescription:
@@ -506,7 +506,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Muebles",
     imageUrl:
-      "https://www.kindpng.com/picc/m/630-6304059_four-slide-sillas-gamer-costa-rica-hd-png.png",
+      "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Silla gamer ergonómica con soporte lumbar y reclinable.",
     detailedDescription:
@@ -542,7 +542,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Computación",
     imageUrl:
-      "https://www.kindpng.com/picc/m/318-3182189_computer-keyboard-input-device-computer-component-space-hd.png",
+      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description:
       "Teclado inalámbrico cómodo y ligero, compatible con múltiples dispositivos.",
@@ -579,7 +579,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Telefonía",
     imageUrl:
-      "https://www.kindpng.com/picc/m/28-287230_samsung-galaxy-hd-png-download.png",
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description:
       "Smartphone con pantalla AMOLED, cámara avanzada y alto rendimiento.",
@@ -618,7 +618,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Ropa",
     imageUrl:
-      "https://www.kindpng.com/picc/m/22-225975_jacket-png-transparent-png.png",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Chaqueta ligera ideal para entrenamiento.",
     detailedDescription:
@@ -648,7 +648,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Calzado",
     imageUrl:
-      "https://www.kindpng.com/picc/m/223-2232658_boots-hd-png-download.png",
+      "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Botines de cuero cómodos y resistentes.",
     detailedDescription:
@@ -674,7 +674,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Audio",
     imageUrl:
-      "https://www.kindpng.com/picc/m/451-4517683_midi-keyboard-png.png",
+      "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Teclado MIDI profesional para producción musical.",
     detailedDescription:
@@ -704,7 +704,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Electrónica",
     imageUrl:
-      "https://www.kindpng.com/picc/m/129-1290627_drone-transparent-png.png",
+      "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Drone profesional con cámara 4K.",
     detailedDescription:
@@ -734,7 +734,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Electrónica",
     imageUrl:
-      "https://www.kindpng.com/picc/m/736-7366613_oled-tv-transparent-png.png",
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Televisor OLED de 55 pulgadas con HDR+.",
     detailedDescription:
@@ -764,7 +764,7 @@ export const products: Product[] = [
     isActive: true,
     category: "Hogar",
     imageUrl:
-      "https://www.kindpng.com/picc/m/271-2712194_coffee-machine-png.png",
+      "https://images.unsplash.com/photo-1520981825232-ece5fae45120?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Cafetera automática con molinillo integrado.",
     detailedDescription:
@@ -793,7 +793,7 @@ export const products: Product[] = [
     price: 179.99,
     isActive: true,
     category: "Muebles",
-    imageUrl: "https://www.kindpng.com/picc/m/72-720423_table-png.png",
+    imageUrl: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80",
     createdAt: Date.now(),
     description: "Escritorio de madera para oficina o estudio.",
     detailedDescription:

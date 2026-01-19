@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   },
 };
 
+import Footer from "./components/features/layout/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +31,10 @@ export default function RootLayout({
   return (
     <CartProvider>
       <html data-theme="corporate" lang="es" className={roboto.className}>
-        <body>{children}</body>
+        <body className="flex flex-col min-h-screen">
+          {children}
+          <Footer />
+        </body>
       </html>
     </CartProvider>
   );
