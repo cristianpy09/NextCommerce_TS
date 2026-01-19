@@ -4,12 +4,15 @@ import { useContext } from "react";
 import SearchBar from "@/app/components/ui/SearchBar";
 import Link from "next/link";
 import { CartContext } from "@/app/context/CartContext";
+import { useAuth } from "@/app/context/AuthContext";
 import { redirect } from "next/navigation";
 import { products } from "@/app/data/products";
-import { ShoppingBag, User, LogOut, Heart } from "lucide-react";
+import { ShoppingBag, User, LogOut, Heart, LogIn } from "lucide-react";
 
 export default function Header() {
   const cart = useContext(CartContext);
+  const { user, logout } = useAuth();
+
   const resetProducts = () => {
     const setNuevo = cart?.setDisplayProducts
     if (setNuevo) {
@@ -60,28 +63,47 @@ export default function Header() {
           </Link>
 
           {/* User Avatar */}
-
-          <div className="relative group">
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
-              >
-                <div className="w-10 rounded-full">
-                  <img
-                    alt="Tailwind CSS Navbar component"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                  />
+          {user ? (
+            <div className="relative group z-50">
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar border border-gray-200"
+                >
+                  <div className="w-10 rounded-full">
+                    <img
+                      alt={user.name}
+                      src={user.avatar || "https://ui-avatars.com/api/?name=User"}
+                    />
+                  </div>
                 </div>
+                <ul className="menu menu-sm dropdown-content bg-white rounded-box z-[100] mt-3 w-52 p-2 shadow-lg border border-gray-100">
+                  <li className="border-b border-gray-100 pb-2 mb-2 px-4">
+                    <span className="font-semibold text-gray-800">{user.name}</span>
+                    <span className="text-xs text-gray-500">{user.email}</span>
+                  </li>
+                  <li>
+                    <Link href="/profile" className="flex items-center gap-2">
+                      <User size={16} /> Mi Perfil
+                    </Link>
+                  </li>
+                  <li>
+                    <button onClick={logout} className="flex items-center gap-2 text-red-600 hover:bg-red-50">
+                      <LogOut size={16} /> Cerrar Sesión
+                    </button>
+                  </li>
+                </ul>
               </div>
-              <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                <li>
-                  <button onClick={() => redirect("/login")}>Logout</button>
-                </li>
-              </ul>
             </div>
-          </div>
+          ) : (
+            <Link href="/login">
+              <button className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition">
+                <LogIn size={20} />
+                <span className="hidden sm:block">Entrar</span>
+              </button>
+            </Link>
+          )}
         </div>
       </nav>
     </header>

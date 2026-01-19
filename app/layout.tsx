@@ -23,6 +23,9 @@ import Footer from "./components/features/layout/Footer";
 import { Toaster } from "sonner";
 import { WishlistProvider } from "./context/WishlistContext";
 
+import { AuthProvider } from "./context/AuthContext";
+import { OrderProvider } from "./context/OrderContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,15 +36,19 @@ export default function RootLayout({
   return (
     <CartProvider>
       <WishlistProvider>
-        <html data-theme="corporate" lang="es" className={roboto.className}>
-          <body className="flex flex-col min-h-screen">
-            <Toaster richColors position="top-center" />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </body>
-        </html>
+        <AuthProvider>
+          <OrderProvider>
+            <html data-theme="corporate" lang="es" className={roboto.className}>
+              <body className="flex flex-col min-h-screen">
+                <Toaster richColors position="top-center" />
+                <main className="flex-grow">
+                  {children}
+                </main>
+                <Footer />
+              </body>
+            </html>
+          </OrderProvider>
+        </AuthProvider>
       </WishlistProvider>
     </CartProvider>
   );

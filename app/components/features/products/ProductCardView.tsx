@@ -8,6 +8,7 @@ import Button from "../../ui/Button";
 import { toast } from "sonner";
 import { Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import ReviewForm from "./ReviewForm";
 
 type Props = {
   product: Product;
@@ -205,6 +206,9 @@ export default function ProductCardView({
               )}
             </div>
 
+
+            {/* Review Form */}
+            <ReviewForm productId={sku || "unknown"} />
           </div>
         </div>
       </div>
@@ -220,6 +224,13 @@ export default function ProductCardView({
       transition={{ duration: 0.4 }}
       className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full relative"
     >
+      {/* Badges */}
+      {product.discount && (
+        <div className="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
+          -{product.discount}% OFF
+        </div>
+      )}
+
       <button
         onClick={toggleWishlist}
         className="absolute top-3 right-3 p-2 bg-white/80 backdrop-blur-sm rounded-full shadow-sm hover:bg-red-50 transition z-10 opacity-0 group-hover:opacity-100"
@@ -239,11 +250,17 @@ export default function ProductCardView({
       </div>
 
       <div className="p-5 flex flex-col flex-1">
-        <div className="mb-2">
+        <div className="mb-2 flex items-center justify-between">
           <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-full uppercase tracking-wider">
             {category}
           </span>
+          {product.inStock !== undefined && (
+            <span className={`text-xs font-medium ${product.inStock ? 'text-green-600' : 'text-red-600'}`}>
+              {product.inStock ? '● In Stock' : '● Out of Stock'}
+            </span>
+          )}
         </div>
+
         <h3 className="text-lg font-bold text-gray-900 mb-1 line-clamp-1 group-hover:text-blue-600 transition">
           {name}
         </h3>
@@ -251,13 +268,21 @@ export default function ProductCardView({
           {description}
         </p>
 
-        <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
+        <div className="flex items-baseline gap-2 mb-4">
           <span className="text-xl font-bold text-gray-900">
             ${price?.toFixed(2)}
           </span>
-          <Link href={`/${sku}`}>
-            <span className="text-sm font-medium text-blue-600 hover:text-blue-800 transition">
-              Ver Detalles →
+          {product.originalPrice && (
+            <span className="text-sm text-gray-400 line-through">
+              ${product.originalPrice.toFixed(2)}
+            </span>
+          )}
+        </div>
+
+        <div className="flex items-center gap-2 pt-4 border-t border-gray-100 mt-auto">
+          <Link href={`/${sku}`} className="flex-1">
+            <span className="block text-center py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition text-sm">
+              View Details
             </span>
           </Link>
         </div>

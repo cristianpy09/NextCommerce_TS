@@ -7,6 +7,7 @@ import * as z from "zod";
 import Input from "@/app/components/ui/Input";
 import Button from "@/app/components/ui/Button";
 import { CartContext } from "@/app/context/CartContext";
+import { useOrders } from "@/app/context/OrderContext";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
@@ -24,6 +25,7 @@ type Inputs = z.infer<typeof schema>;
 
 export default function CheckoutPage() {
     const cart = useContext(CartContext);
+    const { createOrder } = useOrders();
     const router = useRouter();
     const [isProcessing, setIsProcessing] = useState(false);
 
@@ -44,13 +46,22 @@ export default function CheckoutPage() {
 
         setIsProcessing(false);
 
+        // Create order
+        if (cart) {
+            const orderItems = cart.cartItems.map(item => ({
+                product: item,
+                quantity: item.quantity || 1
+            }));
+            createOrder(orderItems, total);
+        }
+
         toast.success(`¡Gracias ${data.fullName}! Tu compra ha sido procesada exitosamente.`);
 
-        // Limpiar carrito (debería implementar clearCart en context, pero por ahora vaciamos manualmente si no existe)
+        // Limpiar carrito
         if (cart) {
             cart.setCartItems([]);
         }
-        router.push("/");
+        router.push("/profile");
     };
 
     if (!cart || cart.cartItems.length === 0) {

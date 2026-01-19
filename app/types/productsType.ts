@@ -11,6 +11,10 @@ export interface Product {
   description?: string;
   detailedDescription?: string;
   tags?: string[];
+  stock?: number;
+  inStock?: boolean;
+  discount?: number; // percentage discount
+  originalPrice?: number;
   dimensions?: {
     width: number;
     height: number;
@@ -26,4 +30,4 @@ export interface Product {
     comment: string;
     rating: number;
   }[];
-  }
+}

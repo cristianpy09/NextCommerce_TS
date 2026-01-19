@@ -17,7 +17,9 @@ export default function Footer() {
                         {/* Social Icons (mock) */}
                         <a href="#" className="hover:text-white transition">Facebook</a>
                         <a href="#" className="hover:text-white transition">Twitter</a>
-                        <a href="#" className="hover:text-white transition">Instagram</a>
+                        <Link href="/contact" className="text-gray-400 hover:text-white transition">
+                            Contacto
+                        </Link>
                     </div>
                 </div>
 
